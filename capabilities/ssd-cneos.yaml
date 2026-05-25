@@ -1,0 +1,28 @@
+aid: nasa-gov:capability:ssd-cneos
+name: Solar System Body Risk and Orbital Data
+description: Query JPL SSD/CNEOS APIs for close approach data, small body database, Sentry impact risk, fireball events, NHATS, and Scout.
+api: nasa-gov:ssd-cneos
+operations:
+- id: getCAD
+  method: GET
+  path: /cad.api
+- id: sbdbLookup
+  method: GET
+  path: /sbdb.api
+- id: sbdbQuery
+  method: GET
+  path: /sbdb_query.api
+- id: sentry
+  method: GET
+  path: /sentry.api
+- id: fireball
+  method: GET
+  path: /fireball.api
+- id: nhats
+  method: GET
+  path: /nhats.api
+- id: scout
+  method: GET
+  path: /scout.api
+authentication:
+  method: none

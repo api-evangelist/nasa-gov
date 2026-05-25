@@ -1,0 +1,124 @@
+openapi: 3.0.3
+info:
+  title: NASA Earth Imagery API
+  description: |
+    Unlock the significant public investment in earth observation data. Returns Landsat 8 imagery for a
+    given latitude/longitude/date and asset metadata. Useful for deforestation monitoring, natural
+    disaster damage assessment, and other Earth surface change detection.
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://api.nasa.gov
+security:
+- ApiKeyAuth: []
+paths:
+  /planetary/earth/imagery:
+    get:
+      summary: Get Earth Imagery
+      operationId: getEarthImagery
+      tags:
+      - Earth
+      parameters:
+      - name: lat
+        in: query
+        required: true
+        schema:
+          type: number
+          format: float
+      - name: lon
+        in: query
+        required: true
+        schema:
+          type: number
+          format: float
+      - name: dim
+        in: query
+        description: Width and height of image in degrees (default 0.025).
+        schema:
+          type: number
+          format: float
+      - name: date
+        in: query
+        description: Date of image (YYYY-MM-DD). Returns image closest to this date.
+        schema:
+          type: string
+          format: date
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+          default: DEMO_KEY
+      responses:
+        '200':
+          description: PNG image of Earth at the requested coordinate/date.
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+  /planetary/earth/assets:
+    get:
+      summary: Get Earth Imagery Asset Metadata
+      operationId: getEarthAssets
+      tags:
+      - Earth
+      parameters:
+      - name: lat
+        in: query
+        required: true
+        schema:
+          type: number
+          format: float
+      - name: lon
+        in: query
+        required: true
+        schema:
+          type: number
+          format: float
+      - name: date
+        in: query
+        required: true
+        schema:
+          type: string
+          format: date
+      - name: dim
+        in: query
+        schema:
+          type: number
+          format: float
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+          default: DEMO_KEY
+      responses:
+        '200':
+          description: Asset metadata for the requested coordinate.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  date:
+                    type: string
+                  id:
+                    type: string
+                  resource:
+                    type: object
+                  service_version:
+                    type: string
+                  url:
+                    type: string
+                    format: uri
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

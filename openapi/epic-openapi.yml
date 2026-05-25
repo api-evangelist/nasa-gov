@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: NASA EPIC (Earth Polychromatic Imaging Camera) API
+  description: |
+    The DSCOVR EPIC instrument provides full-disc imagery of Earth and captures unique perspectives of certain
+    astronomical events such as lunar transits. The API returns natural and enhanced color image metadata with
+    centroid coordinates, spacecraft, sun, and lunar positions.
+  version: '1.0'
+  contact:
+    name: NASA EPIC
+    url: https://epic.gsfc.nasa.gov/about/api
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://api.nasa.gov/EPIC
+security:
+- ApiKeyAuth: []
+paths:
+  /api/natural:
+    get:
+      summary: Get Most Recent Natural Color Images
+      operationId: getNaturalRecent
+      tags:
+      - Natural
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Metadata for the most recent natural color EPIC images.
+  /api/natural/date/{date}:
+    get:
+      summary: Get Natural Color Images by Date
+      operationId: getNaturalByDate
+      tags:
+      - Natural
+      parameters:
+      - name: date
+        in: path
+        required: true
+        schema:
+          type: string
+          format: date
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Metadata for natural color EPIC images taken on the given date.
+  /api/natural/available:
+    get:
+      summary: Get Available Natural Color Dates
+      operationId: getNaturalAvailable
+      tags:
+      - Natural
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of dates for which natural color images are available.
+  /api/natural/all:
+    get:
+      summary: Get All Natural Color Image Dates
+      operationId: getNaturalAll
+      tags:
+      - Natural
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: All dates with natural color image counts.
+  /api/enhanced:
+    get:
+      summary: Get Most Recent Enhanced Color Images
+      operationId: getEnhancedRecent
+      tags:
+      - Enhanced
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Metadata for the most recent enhanced color EPIC images.
+  /api/enhanced/date/{date}:
+    get:
+      summary: Get Enhanced Color Images by Date
+      operationId: getEnhancedByDate
+      tags:
+      - Enhanced
+      parameters:
+      - name: date
+        in: path
+        required: true
+        schema:
+          type: string
+          format: date
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Metadata for enhanced color EPIC images taken on the given date.
+  /api/enhanced/available:
+    get:
+      summary: Get Available Enhanced Color Dates
+      operationId: getEnhancedAvailable
+      tags:
+      - Enhanced
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of dates for which enhanced color images are available.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+        default: DEMO_KEY

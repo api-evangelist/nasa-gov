@@ -1,0 +1,150 @@
+openapi: 3.0.3
+info:
+  title: NASA Image and Video Library API
+  description: |
+    API for the NASA Image and Video Library at images.nasa.gov. Supports searching the library, retrieving
+    asset manifests, metadata, captions, and resolving rich-text URLs.
+  version: '1.0'
+  contact:
+    name: NASA Image and Video Library
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://images-api.nasa.gov
+paths:
+  /search:
+    get:
+      summary: Search NASA Image and Video Library
+      operationId: searchLibrary
+      tags:
+      - Search
+      parameters:
+      - name: q
+        in: query
+        description: Free text search terms.
+        schema:
+          type: string
+      - name: center
+        in: query
+        schema:
+          type: string
+      - name: description
+        in: query
+        schema:
+          type: string
+      - name: description_508
+        in: query
+        schema:
+          type: string
+      - name: keywords
+        in: query
+        schema:
+          type: string
+      - name: location
+        in: query
+        schema:
+          type: string
+      - name: media_type
+        in: query
+        schema:
+          type: string
+          enum:
+          - image
+          - video
+          - audio
+      - name: nasa_id
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - name: photographer
+        in: query
+        schema:
+          type: string
+      - name: secondary_creator
+        in: query
+        schema:
+          type: string
+      - name: title
+        in: query
+        schema:
+          type: string
+      - name: year_start
+        in: query
+        schema:
+          type: string
+      - name: year_end
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Paged collection of matching media assets.
+  /asset/{nasa_id}:
+    get:
+      summary: Get Media Asset Manifest
+      operationId: getAsset
+      tags:
+      - Asset
+      parameters:
+      - name: nasa_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of asset file URLs (image variants, video renditions, captions).
+  /metadata/{nasa_id}:
+    get:
+      summary: Get Media Asset Metadata
+      operationId: getMetadata
+      tags:
+      - Asset
+      parameters:
+      - name: nasa_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Pointer to JSON metadata location for the asset.
+  /captions/{nasa_id}:
+    get:
+      summary: Get Video Asset Captions Location
+      operationId: getCaptions
+      tags:
+      - Asset
+      parameters:
+      - name: nasa_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Pointer to captions file (SRT/VTT) location for video assets.
+  /album/{album_name}:
+    get:
+      summary: Get Album Manifest
+      operationId: getAlbum
+      tags:
+      - Album
+      parameters:
+      - name: album_name
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Album contents.

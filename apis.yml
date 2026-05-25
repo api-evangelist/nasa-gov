@@ -1,0 +1,496 @@
+aid: nasa-gov
+url: https://raw.githubusercontent.com/api-evangelist/nasa-gov/refs/heads/main/apis.yml
+apis:
+- aid: nasa-gov:apod
+  name: NASA Astronomy Picture of the Day (APOD)
+  tags:
+  - Astronomy
+  - Imagery
+  - Space
+  - NASA
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  properties:
+  - url: https://api.nasa.gov/
+    type: Documentation
+  - url: https://github.com/nasa/apod-api
+    type: SourceCode
+  - url: openapi/apod-openapi.yml
+    type: OpenAPI
+  - url: json-schema/apod-schema.json
+    type: JSONSchema
+  - url: capabilities/apod.yaml
+    type: NaftikoCapability
+  description: One of the most popular NASA websites, exposed as a JSON API. Returns the picture (or video)
+    of the day with title, explanation, image URL, HD URL, optional copyright, and media type. Supports
+    date, start_date/end_date ranges, count for random selections, and thumbs for video thumbnails.
+- aid: nasa-gov:asteroids-neows
+  name: NASA Asteroids NeoWs (Near Earth Object Web Service)
+  tags:
+  - Asteroids
+  - Astronomy
+  - Near Earth Objects
+  - NASA
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/neo/rest/v1
+  properties:
+  - url: https://api.nasa.gov/
+    type: Documentation
+  - url: https://github.com/SpaceRocks/NeoWs
+    type: SourceCode
+  - url: openapi/asteroids-neows-openapi.yml
+    type: OpenAPI
+  - url: capabilities/asteroids-neows.yaml
+    type: NaftikoCapability
+  description: RESTful web service for near earth Asteroid information. Lets you search for asteroids by closest
+    approach date, lookup a specific asteroid by NASA JPL small body ID, and browse the overall dataset.
+    Endpoints include /feed, /neo/{id}, and /neo/browse.
+- aid: nasa-gov:donki
+  name: NASA DONKI Space Weather API
+  tags:
+  - Space Weather
+  - Heliophysics
+  - Solar
+  - NASA
+  humanURL: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  baseURL: https://api.nasa.gov/DONKI
+  properties:
+  - url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+    type: Documentation
+  - url: openapi/donki-openapi.yml
+    type: OpenAPI
+  - url: capabilities/donki.yaml
+    type: NaftikoCapability
+  description: Space Weather Database Of Notifications, Knowledge, Information (DONKI) — a comprehensive
+    on-line tool for space weather forecasters, scientists, and the general public. Exposes coronal mass ejections,
+    geomagnetic storms, interplanetary shocks, solar flares, solar energetic particles, magnetopause crossings,
+    radiation belt enhancements, and high-speed streams.
+- aid: nasa-gov:earth
+  name: NASA Earth Imagery API
+  tags:
+  - Earth
+  - Imagery
+  - Landsat
+  - Remote Sensing
+  - NASA
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/earth
+  properties:
+  - url: https://api.nasa.gov/
+    type: Documentation
+  - url: openapi/earth-openapi.yml
+    type: OpenAPI
+  - url: capabilities/earth.yaml
+    type: NaftikoCapability
+  description: Unlock the significant public investment in earth observation data. Returns Landsat 8 imagery
+    for a given latitude/longitude and date plus assets/metadata. Useful for deforestation monitoring, natural
+    disaster damage assessment, and other Earth surface change detection.
+- aid: nasa-gov:eonet
+  name: NASA EONET (Earth Observatory Natural Event Tracker)
+  tags:
+  - Earth
+  - Natural Events
+  - Disasters
+  - Earth Observatory
+  - NASA
+  humanURL: https://eonet.gsfc.nasa.gov/docs/v3
+  baseURL: https://eonet.gsfc.nasa.gov/api/v3
+  properties:
+  - url: https://eonet.gsfc.nasa.gov/docs/v3
+    type: Documentation
+  - url: openapi/eonet-openapi.yml
+    type: OpenAPI
+  - url: capabilities/eonet.yaml
+    type: NaftikoCapability
+  description: Continuously updated, curated source of natural events occurring on Earth — wildfires, severe
+    storms, volcanoes, sea/lake ice, drought, dust/haze, earthquakes, floods, landslides, manmade events,
+    snow, temperature extremes, and water color. Returns events, categories, layers, sources, and magnitudes.
+- aid: nasa-gov:epic
+  name: NASA EPIC (Earth Polychromatic Imaging Camera)
+  tags:
+  - Earth
+  - Imagery
+  - DSCOVR
+  - NASA
+  humanURL: https://epic.gsfc.nasa.gov/about/api
+  baseURL: https://api.nasa.gov/EPIC
+  properties:
+  - url: https://epic.gsfc.nasa.gov/about/api
+    type: Documentation
+  - url: openapi/epic-openapi.yml
+    type: OpenAPI
+  - url: capabilities/epic.yaml
+    type: NaftikoCapability
+  description: The Earth Polychromatic Imaging Camera (EPIC) instrument aboard the DSCOVR satellite provides
+    full-disc imagery of the Earth. Returns natural and enhanced color image metadata with centroid coordinates,
+    spacecraft position, sun position, and lunar position. Both /natural and /enhanced collections supported.
+- aid: nasa-gov:exoplanet
+  name: NASA Exoplanet Archive API
+  tags:
+  - Exoplanets
+  - Astronomy
+  - Astrophysics
+  - NASA
+  humanURL: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  baseURL: https://exoplanetarchive.ipac.caltech.edu/TAP
+  properties:
+  - url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+    type: Documentation
+  - url: openapi/exoplanet-openapi.yml
+    type: OpenAPI
+  - url: capabilities/exoplanet.yaml
+    type: NaftikoCapability
+  description: Programmatic access to NASA's Exoplanet Archive — confirmed planets, planetary candidates,
+    Kepler/K2/TESS objects of interest, microlensing events, and direct imaging detections. Uses the IPAC
+    Table Access Protocol (TAP) with ADQL queries returning CSV, JSON, VOTable, or IPAC ASCII.
+- aid: nasa-gov:insight
+  name: NASA InSight Mars Weather Service API
+  tags:
+  - Mars
+  - Weather
+  - InSight
+  - Planetary Science
+  - NASA
+  humanURL: https://mars.nasa.gov/insight/weather/
+  baseURL: https://api.nasa.gov/insight_weather
+  properties:
+  - url: https://mars.nasa.gov/insight/weather/
+    type: Documentation
+  - url: openapi/insight-openapi.yml
+    type: OpenAPI
+  - url: capabilities/insight.yaml
+    type: NaftikoCapability
+  description: Per-Sol summary data for each of the last seven available Sols (Martian days) of weather at
+    Elysium Planitia, measured by the InSight lander. Reports atmospheric temperature, wind speed and direction,
+    and atmospheric pressure. Note - InSight ended operations in December 2022; data is historical.
+- aid: nasa-gov:mars-rover-photos
+  name: NASA Mars Rover Photos API
+  tags:
+  - Mars
+  - Rovers
+  - Imagery
+  - Planetary Science
+  - NASA
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/mars-photos/api/v1
+  properties:
+  - url: https://api.nasa.gov/
+    type: Documentation
+  - url: https://github.com/chrisccerami/mars-photo-api
+    type: SourceCode
+  - url: openapi/mars-rover-photos-openapi.yml
+    type: OpenAPI
+  - url: capabilities/mars-rover-photos.yaml
+    type: NaftikoCapability
+  description: Image data gathered by NASA's Curiosity, Opportunity, Spirit, and Perseverance rovers on Mars.
+    Each photo can be queried by Earth date or Martian sol with optional camera filter (FHAZ, RHAZ, MAST,
+    CHEMCAM, MAHLI, MARDI, NAVCAM, PANCAM, MINITES).
+- aid: nasa-gov:image-video-library
+  name: NASA Image and Video Library API
+  tags:
+  - Imagery
+  - Video
+  - Media
+  - NASA
+  humanURL: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  baseURL: https://images-api.nasa.gov
+  properties:
+  - url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+    type: Documentation
+  - url: https://github.com/nasa/NASA-Image-and-Video-Library
+    type: SourceCode
+  - url: openapi/image-video-library-openapi.yml
+    type: OpenAPI
+  - url: capabilities/image-video-library.yaml
+    type: NaftikoCapability
+  description: API to access the NASA Image and Video Library at images.nasa.gov. Supports searching the
+    Library, retrieving asset manifests, metadata, captions, and resolving rich-text URLs. Endpoints include
+    /search, /asset, /metadata, /captions, and /album.
+- aid: nasa-gov:techtransfer
+  name: NASA TechTransfer API
+  tags:
+  - Patents
+  - Software
+  - Technology Transfer
+  - Innovation
+  - NASA
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/techtransfer
+  properties:
+  - url: https://api.nasa.gov/
+    type: Documentation
+  - url: https://technology.nasa.gov/
+    type: Portal
+  - url: openapi/techtransfer-openapi.yml
+    type: OpenAPI
+  - url: capabilities/techtransfer.yaml
+    type: NaftikoCapability
+  description: Structured, searchable developer access to NASA's patents, software, and Spinoff publications.
+    Patents are part of the NASA Technology Transfer Program with the goal of bringing NASA technology down
+    to Earth. Endpoints include /patent, /patent/issued, /software, and /spinoff.
+- aid: nasa-gov:ssd-cneos
+  name: NASA SSD/CNEOS API
+  tags:
+  - Solar System
+  - Near Earth Objects
+  - Asteroids
+  - NASA
+  humanURL: https://ssd-api.jpl.nasa.gov/
+  baseURL: https://ssd-api.jpl.nasa.gov
+  properties:
+  - url: https://ssd-api.jpl.nasa.gov/
+    type: Documentation
+  - url: openapi/ssd-cneos-openapi.yml
+    type: OpenAPI
+  - url: capabilities/ssd-cneos.yaml
+    type: NaftikoCapability
+  description: Solar System Dynamics and Center for Near-Earth Object Studies APIs at JPL. Includes CAD (close-approach
+    data), SBDB (small body database lookup and query), Sentry (impact risk), Fireball, NHATS, mission design,
+    and scout. Provides authoritative orbital, physical, and risk data for small bodies.
+- aid: nasa-gov:techport
+  name: NASA TechPort API
+  tags:
+  - Technology
+  - Projects
+  - Research
+  - Innovation
+  - NASA
+  humanURL: https://techport.nasa.gov/api
+  baseURL: https://api.nasa.gov/techport/api
+  properties:
+  - url: https://techport.nasa.gov/api
+    type: Documentation
+  - url: openapi/techport-openapi.yml
+    type: OpenAPI
+  - url: capabilities/techport.yaml
+    type: NaftikoCapability
+  description: API to make NASA technology project data available in a machine-readable format. Returns project
+    title, description, benefits, status, dates, organizations, technology areas, and program. Useful for
+    research discovery, technology scouting, and grant analysis.
+- aid: nasa-gov:tle
+  name: NASA TLE API (Two-Line Element Set)
+  tags:
+  - Satellites
+  - Orbital
+  - TLE
+  - Space Situational Awareness
+  - NASA
+  humanURL: https://tle.ivanstanojevic.me/
+  baseURL: https://tle.ivanstanojevic.me/api
+  properties:
+  - url: https://tle.ivanstanojevic.me/
+    type: Documentation
+  - url: openapi/tle-openapi.yml
+    type: OpenAPI
+  - url: capabilities/tle.yaml
+    type: NaftikoCapability
+  description: Two-line element set (TLE) data for earth-orbiting objects at a given point in time. Hosted
+    in partnership outside api.nasa.gov but listed in the NASA Open APIs catalog. Returns satellite name,
+    NORAD ID, line1, line2, and source attribution.
+- aid: nasa-gov:satellite-situation-center
+  name: NASA Satellite Situation Center API
+  tags:
+  - Satellites
+  - Heliophysics
+  - Spacecraft
+  - NASA
+  humanURL: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  baseURL: https://sscweb.gsfc.nasa.gov/WS/sscr/2
+  properties:
+  - url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+    type: Documentation
+  - url: openapi/satellite-situation-center-openapi.yml
+    type: OpenAPI
+  - url: capabilities/satellite-situation-center.yaml
+    type: NaftikoCapability
+  description: System to cast geocentric spacecraft location information into a framework of (empirical) geophysical
+    regions and mappings of point locations along the spacecraft trajectory to/from locations of interest
+    (e.g. magnetic conjunctions, IMF mappings).
+- aid: nasa-gov:genelab
+  name: NASA GeneLab Search API
+  tags:
+  - Bioscience
+  - Genomics
+  - Omics
+  - Space Biology
+  - NASA
+  humanURL: https://genelab.nasa.gov/genelab-help/genelab-api
+  baseURL: https://genelab-data.ndc.nasa.gov/genelab/data
+  properties:
+  - url: https://genelab.nasa.gov/genelab-help/genelab-api
+    type: Documentation
+  - url: openapi/genelab-openapi.yml
+    type: OpenAPI
+  - url: capabilities/genelab.yaml
+    type: NaftikoCapability
+  description: Programmatic interface for GeneLab's public data repository — space biology omics datasets
+    (genomic, transcriptomic, proteomic, metabolomic, metagenomic) for organisms studied in spaceflight or
+    space-relevant environments. Search by term, type, and organism.
+- aid: nasa-gov:trek-wmts
+  name: NASA Vesta/Moon/Mars Trek WMTS
+  tags:
+  - Maps
+  - WMTS
+  - Mars
+  - Moon
+  - Vesta
+  - NASA
+  humanURL: https://trek.nasa.gov/
+  baseURL: https://trek.nasa.gov/tiles/Mars/EQ
+  properties:
+  - url: https://trek.nasa.gov/
+    type: Documentation
+  - url: openapi/trek-wmts-openapi.yml
+    type: OpenAPI
+  description: A Web Map Tile Service (WMTS) for the Vesta, Moon, and Mars Trek imagery projects. Standardized
+    OGC WMTS tiles consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.
+name: NASA Open APIs
+tags:
+- Government
+- Federal
+- Space
+- Earth Science
+- Open Data
+- Astronomy
+- Planetary Science
+- Heliophysics
+- Bioscience
+- NASA
+kind: contract
+x-type: government
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+common:
+- url: https://api.nasa.gov/
+  name: NASA Open APIs Portal
+  type: Portal
+- url: https://api.nasa.gov/
+  name: API Documentation
+  type: Documentation
+- url: https://api.nasa.gov/#signUp
+  name: Generate API Key
+  type: SignUp
+- url: https://api.data.gov/docs/
+  name: api.data.gov Documentation
+  type: Documentation
+- url: https://api.data.gov/docs/rate-limits/
+  name: api.data.gov Rate Limits
+  type: RateLimits
+- url: https://www.nasa.gov/data/
+  name: NASA Open Data
+  type: Documentation
+- url: https://data.nasa.gov/
+  name: NASA Open Data Portal
+  type: Portal
+- url: https://catalog.data.gov/organization/nasa-gov
+  name: NASA on data.gov
+  type: Portal
+- url: https://www.nasa.gov/
+  name: NASA Home
+  type: Portal
+- url: https://www.nasa.gov/news/
+  type: Blog
+- url: https://www.nasa.gov/privacy/
+  type: PrivacyPolicy
+- url: https://www.nasa.gov/website-and-section508-disclaimer/
+  type: TermsOfService
+- url: https://www.nasa.gov/about-nasa/
+  name: About NASA
+  type: Documentation
+- url: https://github.com/nasa
+  type: GitHubOrganization
+- url: https://code.nasa.gov/
+  name: code.nasa.gov
+  type: Portal
+- url: https://github.com/nasa/api-docs
+  name: NASA api-docs Repository
+  type: SourceCode
+- url: https://github.com/nasa/apod-api
+  name: APOD Source Code
+  type: SourceCode
+- url: https://github.com/nasa/eyes
+  name: NASA Eyes Visualization
+  type: SourceCode
+- url: https://github.com/nasa/openmct
+  name: Open MCT (Mission Control Technologies)
+  type: SourceCode
+- url: https://github.com/nasa/cumulus
+  name: Cumulus Earth Science Data Framework
+  type: SourceCode
+- url: https://github.com/nasa/cFS
+  name: Core Flight System
+  type: SourceCode
+- url: https://github.com/nasa/trick
+  name: Trick Simulation Environment
+  type: SourceCode
+- url: https://images.nasa.gov/
+  name: NASA Image and Video Library
+  type: Portal
+- url: https://technology.nasa.gov/
+  name: NASA Technology Transfer Portal
+  type: Portal
+- url: https://techport.nasa.gov/
+  name: NASA TechPort Portal
+  type: Portal
+- url: mailto:hq-open-innovation@mail.nasa.gov
+  name: Open Innovation Contact
+  type: Support
+- url: https://www.nasa.gov/foia/
+  name: NASA FOIA
+  type: Documentation
+- url: rate-limits/nasa-gov-rate-limits.yml
+  type: RateLimits
+- type: Features
+  data:
+  - Single unified developer portal at api.nasa.gov fronted by api.data.gov key infrastructure
+  - Single api_key query parameter authenticates against every major endpoint
+  - Free DEMO_KEY mode for evaluation (30 req/hr, 50 req/day per IP)
+  - Personal API key default rate limit of 1000 requests per hour per key
+  - X-RateLimit-Limit / X-RateLimit-Remaining response headers on every call
+  - APOD - Astronomy Picture of the Day with date range, count, and HD URL support
+  - Asteroids NeoWs - feed, lookup, and browse for near-earth asteroids
+  - DONKI - eleven space weather event types (CME, GST, IPS, FLR, SEP, MPC, RBE, HSS, EONET, WSAEnlilSimulations, notifications)
+  - Earth - Landsat 8 imagery and asset metadata by latitude/longitude/date
+  - EONET - curated natural events tracker (12 categories, events/sources/categories/layers/magnitudes)
+  - EPIC - DSCOVR full-disc Earth imagery with sun/moon/spacecraft positions
+  - Exoplanet Archive - IPAC TAP service with ADQL queries returning CSV/JSON/VOTable
+  - Mars Rover Photos - Curiosity, Opportunity, Spirit, Perseverance imagery by sol or Earth date
+  - InSight Mars Weather - last seven sols of weather at Elysium Planitia (historical)
+  - NASA Image and Video Library - search/asset/metadata/captions/album
+  - SSD/CNEOS - small body database, close approach data, Sentry impact risk, fireball, NHATS
+  - TechPort - NASA technology project portfolio data
+  - TechTransfer - patents, software, and spinoff publications
+  - TLE - two-line element sets for earth-orbiting satellites
+  - Satellite Situation Center - geocentric spacecraft locations and geophysical regions
+  - GeneLab - omics data from spaceflight bioscience experiments
+  - Vesta/Moon/Mars Trek - OGC WMTS tile services for planetary basemaps
+  - Public domain content - NASA imagery and data are generally not copyrighted (with limited exceptions)
+  - 617+ public repositories on github.com/nasa including cFS, openmct, cumulus, trick
+  - Aligned with US Federal Open Data policy and the Foundations for Evidence-Based Policymaking Act
+  sources:
+  - https://api.nasa.gov/
+  - https://github.com/nasa/api-docs
+  - https://api.data.gov/docs/rate-limits/
+  - https://eonet.gsfc.nasa.gov/docs/v3
+  - https://epic.gsfc.nasa.gov/about/api
+  - https://ssd-api.jpl.nasa.gov/
+  - https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  updated: '2026-05-25'
+created: '2026-05-25T00:00:00.000Z'
+modified: '2026-05-25'
+position: Producing
+description: NASA Open APIs is the National Aeronautics and Space Administration's unified, public developer
+  portal exposing space, earth science, planetary, heliophysics, and bioscience datasets at api.nasa.gov.
+  A single API key issued through api.data.gov authenticates the family of APIs including APOD, Asteroids
+  NeoWs, DONKI, Earth, EONET, EPIC, Exoplanet Archive, InSight, Mars Rover Photos, NASA Image and Video
+  Library, TechPort, TechTransfer, SSD/CNEOS, Satellite Situation Center, GeneLab, TLE, and the Vesta/Moon/Mars
+  Trek WMTS services. Together with 617+ open-source repositories on github.com/nasa they represent one of
+  the most comprehensive open federal API surfaces in the world. As a US federal civilian agency NASA's data
+  and software products are generally in the public domain, supporting a global ecosystem of researchers,
+  educators, developers, and citizen scientists.
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  X: apievangelist
+  url: https://apievangelist.com
+specificationVersion: '0.16'

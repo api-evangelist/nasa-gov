@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: NASA TLE API (Two-Line Element Set)
+  description: |
+    Two-line element set (TLE) data for earth-orbiting objects at a given point in time. Listed in the NASA
+    Open APIs catalog and hosted at tle.ivanstanojevic.me. Returns satellite name, NORAD ID, line1, line2,
+    and source attribution.
+  version: '1.0'
+  contact:
+    url: https://tle.ivanstanojevic.me/
+  license:
+    name: Open Data
+servers:
+- url: https://tle.ivanstanojevic.me/api
+paths:
+  /tle:
+    get:
+      summary: List TLE Records
+      operationId: listTle
+      tags:
+      - TLE
+      parameters:
+      - name: search
+        in: query
+        schema:
+          type: string
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - id
+          - name
+          - popularity
+          - '-id'
+          - '-name'
+          - '-popularity'
+      - name: sort-dir
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - name: page-size
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Paged list of TLE records.
+  /tle/{satelliteId}:
+    get:
+      summary: Get TLE by Satellite ID
+      operationId: getTle
+      tags:
+      - TLE
+      parameters:
+      - name: satelliteId
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: TLE record with line1 and line2.

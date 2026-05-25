@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/nasa-gov/json-schema/eonet-event-schema.json",
+  "title": "EonetEvent",
+  "description": "A natural event from NASA EONET (Earth Observatory Natural Event Tracker) v3.",
+  "type": "object",
+  "required": ["id", "title", "categories", "geometry"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "description": {"type": "string"},
+    "link": {"type": "string", "format": "uri"},
+    "closed": {"type": ["string", "null"], "format": "date-time"},
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"}
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "geometry": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "magnitudeValue": {"type": ["number", "null"]},
+          "magnitudeUnit": {"type": ["string", "null"]},
+          "date": {"type": "string", "format": "date-time"},
+          "type": {"type": "string"},
+          "coordinates": {"type": "array"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2026-05-25"
+  },
+  "response": {
+    "date": "2026-05-25",
+    "title": "A Total Lunar Eclipse Over Capitol Reef",
+    "explanation": "A representative example response. Real responses contain a multi-paragraph editorial explanation written by APOD editors describing the imagery, its scientific context, and credits.",
+    "url": "https://apod.nasa.gov/apod/image/2605/example.jpg",
+    "hdurl": "https://apod.nasa.gov/apod/image/2605/example_hd.jpg",
+    "media_type": "image",
+    "service_version": "v1",
+    "copyright": "Example Photographer"
+  }
+}

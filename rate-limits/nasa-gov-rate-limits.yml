@@ -1,0 +1,51 @@
+# API Commons Rate Limits 0.1 - NASA Open APIs (via api.data.gov)
+aid: nasa-gov:rate-limits
+name: NASA Open APIs Rate Limits
+version: '0.1'
+provider: NASA
+url: https://api.data.gov/docs/rate-limits/
+sources:
+- https://api.data.gov/docs/rate-limits/
+- https://api.nasa.gov/
+description: |
+  NASA Open APIs are fronted by api.data.gov which enforces a single API key model and standard
+  per-key per-hour quotas. DEMO_KEY is intended for evaluation only.
+tiers:
+- id: demo-key
+  name: DEMO_KEY (evaluation)
+  description: For unauthenticated exploration and minimal sandbox testing.
+  limits:
+  - dimension: requests
+    window: hour
+    cap: 30
+    perEntity: ip
+  - dimension: requests
+    window: day
+    cap: 50
+    perEntity: ip
+- id: registered-key
+  name: Registered API Key (default)
+  description: Default per-key quota issued via the api.nasa.gov signup form (powered by api.data.gov).
+  limits:
+  - dimension: requests
+    window: hour
+    cap: 1000
+    perEntity: api_key
+  notes:
+  - Higher limits available on request via the api.data.gov support workflow.
+headers:
+- name: X-RateLimit-Limit
+  description: The per-hour request quota for the calling API key.
+- name: X-RateLimit-Remaining
+  description: The number of requests remaining in the current quota window.
+authentication:
+  method: api-key
+  parameter: api_key
+  location: query
+  alternate:
+  - location: header
+    name: X-Api-Key
+notes:
+- Some endpoints proxied through api.nasa.gov (e.g. EONET at eonet.gsfc.nasa.gov, SSD/CNEOS at ssd-api.jpl.nasa.gov, the Exoplanet Archive TAP service) are NOT behind api.data.gov and have their own quota and authentication patterns.
+- TLE API is hosted by an external partner (tle.ivanstanojevic.me) and does not require a NASA API key.
+- Images-api.nasa.gov does not require an API key.

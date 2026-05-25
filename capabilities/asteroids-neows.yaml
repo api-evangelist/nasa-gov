@@ -1,0 +1,21 @@
+aid: nasa-gov:capability:asteroids-neows
+name: Asteroid Tracking
+description: Search, look up, and browse near-earth asteroids using NASA's NeoWs service.
+api: nasa-gov:asteroids-neows
+operations:
+- id: getNeoFeed
+  method: GET
+  path: /neo/rest/v1/feed
+  summary: Get near earth object feed by date range
+- id: getNeoLookup
+  method: GET
+  path: /neo/rest/v1/neo/{asteroid_id}
+  summary: Lookup a specific asteroid
+- id: browseNeo
+  method: GET
+  path: /neo/rest/v1/neo/browse
+  summary: Browse the overall NEO dataset
+authentication:
+  method: api-key
+  parameter: api_key
+  location: query

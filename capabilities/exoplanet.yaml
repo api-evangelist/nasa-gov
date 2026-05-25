@@ -1,0 +1,13 @@
+aid: nasa-gov:capability:exoplanet
+name: Exoplanet Archive Query
+description: Run ADQL queries over NASA's Exoplanet Archive using the IPAC Table Access Protocol.
+api: nasa-gov:exoplanet
+operations:
+- id: tapSync
+  method: GET
+  path: /sync
+- id: tapAsync
+  method: POST
+  path: /async
+authentication:
+  method: none

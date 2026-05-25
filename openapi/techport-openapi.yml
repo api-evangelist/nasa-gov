@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: NASA TechPort API
+  description: |
+    API to make NASA technology project data available in a machine-readable format. Returns project title,
+    description, benefits, status, dates, organizations, technology areas, and program. Useful for research
+    discovery, technology scouting, and grant analysis.
+  version: '1.0'
+  contact:
+    name: NASA TechPort
+    url: https://techport.nasa.gov/api
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://api.nasa.gov/techport
+security:
+- ApiKeyAuth: []
+paths:
+  /api/projects:
+    get:
+      summary: List TechPort Projects
+      operationId: listProjects
+      tags:
+      - Projects
+      parameters:
+      - name: updatedSince
+        in: query
+        schema:
+          type: string
+          format: date
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of TechPort project identifiers.
+  /api/projects/{id}:
+    get:
+      summary: Get TechPort Project by ID
+      operationId: getProject
+      tags:
+      - Projects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Full TechPort project record.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+        default: DEMO_KEY

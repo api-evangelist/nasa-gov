@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/nasa-gov/json-schema/neo-schema.json",
+  "title": "NearEarthObject",
+  "description": "A Near Earth Object record from NASA NeoWs.",
+  "type": "object",
+  "required": ["id", "neo_reference_id", "name", "absolute_magnitude_h", "is_potentially_hazardous_asteroid"],
+  "properties": {
+    "links": {"type": "object"},
+    "id": {"type": "string"},
+    "neo_reference_id": {"type": "string"},
+    "name": {"type": "string"},
+    "nasa_jpl_url": {"type": "string", "format": "uri"},
+    "absolute_magnitude_h": {"type": "number"},
+    "estimated_diameter": {"type": "object"},
+    "is_potentially_hazardous_asteroid": {"type": "boolean"},
+    "is_sentry_object": {"type": "boolean"},
+    "close_approach_data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "close_approach_date": {"type": "string", "format": "date"},
+          "close_approach_date_full": {"type": "string"},
+          "epoch_date_close_approach": {"type": "integer"},
+          "relative_velocity": {"type": "object"},
+          "miss_distance": {"type": "object"},
+          "orbiting_body": {"type": "string"}
+        }
+      }
+    },
+    "orbital_data": {"type": "object"}
+  }
+}

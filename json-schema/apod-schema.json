@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/nasa-gov/json-schema/apod-schema.json",
+  "title": "ApodEntry",
+  "description": "An Astronomy Picture of the Day entry from NASA's APOD API.",
+  "type": "object",
+  "required": ["date", "explanation", "media_type", "title", "url"],
+  "properties": {
+    "date": {"type": "string", "format": "date"},
+    "title": {"type": "string"},
+    "explanation": {"type": "string"},
+    "url": {"type": "string", "format": "uri"},
+    "hdurl": {"type": "string", "format": "uri"},
+    "media_type": {"type": "string", "enum": ["image", "video"]},
+    "service_version": {"type": "string"},
+    "copyright": {"type": "string"},
+    "thumbnail_url": {"type": "string", "format": "uri"}
+  }
+}

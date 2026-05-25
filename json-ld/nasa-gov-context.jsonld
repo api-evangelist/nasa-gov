@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "nasa": "https://api-evangelist.github.io/nasa-gov/vocab#",
+    "schema": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "Agency": "schema:GovernmentOrganization",
+    "API": "schema:WebAPI",
+    "Dataset": "schema:Dataset",
+    "Event": "schema:Event",
+    "Place": "schema:Place",
+    "ImageObject": "schema:ImageObject",
+    "VideoObject": "schema:VideoObject",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "date": "dct:date",
+    "license": "dct:license",
+    "publisher": "dct:publisher",
+    "distribution": "dcat:distribution",
+    "downloadURL": "dcat:downloadURL",
+    "accessURL": "dcat:accessURL",
+    "keyword": "dcat:keyword",
+    "theme": "dcat:theme",
+    "Patent": "nasa:Patent",
+    "Software": "nasa:Software",
+    "Spinoff": "nasa:Spinoff",
+    "Rover": "nasa:Rover",
+    "Mission": "nasa:Mission",
+    "Spacecraft": "nasa:Spacecraft",
+    "NearEarthObject": "nasa:NearEarthObject",
+    "SpaceWeatherEvent": "nasa:SpaceWeatherEvent",
+    "NaturalEvent": "nasa:NaturalEvent",
+    "Exoplanet": "nasa:Exoplanet",
+    "TechnologyProject": "nasa:TechnologyProject"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.nasa.gov",
+      "@type": "GovernmentOrganization",
+      "name": "National Aeronautics and Space Administration",
+      "url": "https://www.nasa.gov",
+      "identifier": "nasa-gov"
+    },
+    {
+      "@id": "https://api.nasa.gov",
+      "@type": "WebAPI",
+      "name": "NASA Open APIs",
+      "publisher": {"@id": "https://www.nasa.gov"},
+      "url": "https://api.nasa.gov"
+    }
+  ]
+}

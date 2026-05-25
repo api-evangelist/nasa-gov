@@ -1,0 +1,72 @@
+openapi: 3.0.3
+info:
+  title: NASA Vesta/Moon/Mars Trek WMTS
+  description: |
+    A Web Map Tile Service (WMTS) for the Vesta, Moon, and Mars Trek imagery projects. Standardized OGC WMTS
+    tiles consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.
+  version: '1.0'
+  contact:
+    name: NASA Trek
+    url: https://trek.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://trek.nasa.gov
+paths:
+  /tiles/{body}/EQ/{layer}/1.0.0/default/default028mm/{z}/{y}/{x}.{ext}:
+    get:
+      summary: Get a Trek WMTS Tile
+      operationId: getTrekTile
+      tags:
+      - WMTS
+      parameters:
+      - name: body
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - Mars
+          - Moon
+          - Vesta
+      - name: layer
+        in: path
+        required: true
+        description: Layer identifier within the Trek body catalog.
+        schema:
+          type: string
+      - name: z
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: y
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: x
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: ext
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - png
+          - jpg
+      responses:
+        '200':
+          description: A WMTS map tile.
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+            image/jpeg:
+              schema:
+                type: string
+                format: binary

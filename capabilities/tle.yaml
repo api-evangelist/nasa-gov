@@ -1,0 +1,13 @@
+aid: nasa-gov:capability:tle
+name: Satellite TLE Retrieval
+description: Retrieve two-line element sets for earth-orbiting satellites listed in the NASA Open APIs catalog.
+api: nasa-gov:tle
+operations:
+- id: listTle
+  method: GET
+  path: /tle
+- id: getTle
+  method: GET
+  path: /tle/{satelliteId}
+authentication:
+  method: none

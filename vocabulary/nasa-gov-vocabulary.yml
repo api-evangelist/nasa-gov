@@ -1,0 +1,108 @@
+aid: nasa-gov:vocabulary
+name: NASA Open APIs Vocabulary
+description: |
+  Domain vocabulary for the NASA Open APIs catalog spanning space science, earth observation, planetary
+  science, heliophysics, astrobiology, and technology transfer concepts surfaced via api.nasa.gov.
+version: '0.1'
+domains:
+- name: Astronomy
+  terms:
+  - APOD
+  - Picture of the Day
+  - Celestial Object
+  - Astrophotography
+- name: Asteroids and Comets
+  terms:
+  - Near Earth Object (NEO)
+  - Asteroid
+  - Comet
+  - Potentially Hazardous Asteroid (PHA)
+  - Close Approach
+  - Small Body
+  - SPK-ID
+  - Sentry Impact Risk
+  - Fireball Event
+  - NHATS
+- name: Heliophysics / Space Weather
+  terms:
+  - Coronal Mass Ejection (CME)
+  - Geomagnetic Storm (GST)
+  - Interplanetary Shock (IPS)
+  - Solar Flare (FLR)
+  - Solar Energetic Particle (SEP)
+  - Magnetopause Crossing (MPC)
+  - Radiation Belt Enhancement (RBE)
+  - High Speed Stream (HSS)
+  - WSA+Enlil Simulation
+- name: Earth Science
+  terms:
+  - Landsat
+  - DSCOVR
+  - EPIC
+  - Wildfire
+  - Severe Storm
+  - Volcano
+  - Drought
+  - Earthquake
+  - Flood
+  - Sea Ice
+  - Dust and Haze
+  - Landslide
+  - Snow Event
+  - Temperature Extreme
+  - Water Color Event
+- name: Planetary Science
+  terms:
+  - Mars Rover
+  - Curiosity
+  - Opportunity
+  - Spirit
+  - Perseverance
+  - InSight
+  - Sol
+  - Elysium Planitia
+  - Lunar Surface
+  - Vesta
+- name: Astrophysics
+  terms:
+  - Exoplanet
+  - Confirmed Planet
+  - Planetary Candidate
+  - Kepler Object of Interest (KOI)
+  - K2 Mission
+  - TESS Object of Interest (TOI)
+  - Microlensing Event
+  - Direct Imaging Detection
+  - IPAC TAP
+  - ADQL
+- name: Astrobiology
+  terms:
+  - Spaceflight Omics
+  - Transcriptomics
+  - Proteomics
+  - Metabolomics
+  - Metagenomics
+  - GeneLab Study
+- name: Space Situational Awareness
+  terms:
+  - Two-Line Element Set (TLE)
+  - NORAD ID
+  - Satellite Situation Center
+  - Geophysical Region
+  - Magnetic Conjunction
+- name: Technology Transfer
+  terms:
+  - NASA Patent
+  - NASA Software Catalog
+  - Spinoff Publication
+  - Technology Area
+  - Technology Readiness Level (TRL)
+  - TechPort Project
+- name: Open Data Governance
+  terms:
+  - api.data.gov
+  - DEMO_KEY
+  - Public Domain
+  - Federal Civilian Agency
+  - data.gov Catalog
+  - Foundations for Evidence-Based Policymaking Act

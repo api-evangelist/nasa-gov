@@ -1,0 +1,219 @@
+openapi: 3.0.3
+info:
+  title: NASA DONKI Space Weather API
+  description: |
+    Space Weather Database Of Notifications, Knowledge, Information (DONKI) is a comprehensive online tool
+    for space weather forecasters, scientists, and the general public providing access to coronal mass
+    ejections, geomagnetic storms, interplanetary shocks, solar flares, solar energetic particles,
+    magnetopause crossings, radiation belt enhancements, and high-speed streams.
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://api.nasa.gov
+security:
+- ApiKeyAuth: []
+paths:
+  /DONKI/CME:
+    get:
+      summary: Get Coronal Mass Ejections
+      operationId: getCME
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of CME records.
+  /DONKI/CMEAnalysis:
+    get:
+      summary: Get CME Analysis
+      operationId: getCMEAnalysis
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - name: mostAccurateOnly
+        in: query
+        schema:
+          type: boolean
+      - name: speed
+        in: query
+        schema:
+          type: number
+      - name: halfAngle
+        in: query
+        schema:
+          type: number
+      - name: catalog
+        in: query
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of CME analysis records.
+  /DONKI/GST:
+    get:
+      summary: Get Geomagnetic Storms
+      operationId: getGST
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of geomagnetic storm records.
+  /DONKI/IPS:
+    get:
+      summary: Get Interplanetary Shocks
+      operationId: getIPS
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - name: location
+        in: query
+        schema:
+          type: string
+      - name: catalog
+        in: query
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of interplanetary shock records.
+  /DONKI/FLR:
+    get:
+      summary: Get Solar Flares
+      operationId: getFLR
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of solar flare records.
+  /DONKI/SEP:
+    get:
+      summary: Get Solar Energetic Particles
+      operationId: getSEP
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of solar energetic particle records.
+  /DONKI/MPC:
+    get:
+      summary: Get Magnetopause Crossings
+      operationId: getMPC
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of magnetopause crossing records.
+  /DONKI/RBE:
+    get:
+      summary: Get Radiation Belt Enhancements
+      operationId: getRBE
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of radiation belt enhancement records.
+  /DONKI/HSS:
+    get:
+      summary: Get High Speed Streams
+      operationId: getHSS
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of high speed stream records.
+  /DONKI/WSAEnlilSimulations:
+    get:
+      summary: Get WSA+EnlilSimulations
+      operationId: getWSAEnlilSimulations
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of WSA+Enlil simulation records.
+  /DONKI/notifications:
+    get:
+      summary: Get DONKI Notifications
+      operationId: getNotifications
+      tags:
+      - DONKI
+      parameters:
+      - $ref: '#/components/parameters/StartDate'
+      - $ref: '#/components/parameters/EndDate'
+      - name: type
+        in: query
+        description: 'Notification type filter. One of: all, FLR, SEP, CME, IPS, MPC, GST, RBE, report.'
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Array of notifications.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+  parameters:
+    StartDate:
+      name: startDate
+      in: query
+      description: Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time.
+      schema:
+        type: string
+        format: date
+    EndDate:
+      name: endDate
+      in: query
+      description: End date (YYYY-MM-DD). Defaults to current UTC time.
+      schema:
+        type: string
+        format: date
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+        default: DEMO_KEY

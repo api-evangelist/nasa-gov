@@ -1,0 +1,12 @@
+aid: nasa-gov:capability:insight
+name: Mars Weather Lookup
+description: Retrieve per-Sol Martian weather summaries from the InSight lander at Elysium Planitia (historical).
+api: nasa-gov:insight
+operations:
+- id: getInsightWeather
+  method: GET
+  path: /
+authentication:
+  method: api-key
+  parameter: api_key
+  location: query

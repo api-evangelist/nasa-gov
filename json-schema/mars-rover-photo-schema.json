@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/nasa-gov/json-schema/mars-rover-photo-schema.json",
+  "title": "MarsRoverPhoto",
+  "description": "A photo entry from the NASA Mars Rover Photos API.",
+  "type": "object",
+  "required": ["id", "img_src", "earth_date", "rover", "camera"],
+  "properties": {
+    "id": {"type": "integer"},
+    "sol": {"type": "integer"},
+    "img_src": {"type": "string", "format": "uri"},
+    "earth_date": {"type": "string", "format": "date"},
+    "camera": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "name": {"type": "string"},
+        "rover_id": {"type": "integer"},
+        "full_name": {"type": "string"}
+      }
+    },
+    "rover": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "name": {"type": "string"},
+        "landing_date": {"type": "string", "format": "date"},
+        "launch_date": {"type": "string", "format": "date"},
+        "status": {"type": "string"}
+      }
+    }
+  }
+}
