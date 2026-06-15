@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "58883e54-4113-4925-8186-06f876950bdc",
+      "name": "Projects",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec3f386c-0091-4b73-b6ea-9a99781136c6",
+          "name": "List TechPort Projects",
+          "request": {
+            "name": "List TechPort Projects",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "projects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "updatedSince",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3a6fe202-542c-47fc-ae8c-7f2dbeb8624d",
+              "name": "List of TechPort project identifiers.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "projects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "updatedSince",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "909bdcc5-b358-4ac8-8f35-b56485b15660",
+          "name": "Get TechPort Project by ID",
+          "request": {
+            "name": "Get TechPort Project by ID",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "projects",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c30de26d-edf0-4663-b0fd-590ea2cc18a9",
+              "name": "Full TechPort project record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "projects",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov/techport",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "031456d8-6e0d-40de-b171-d659c013fc0d",
+    "name": "NASA TechPort API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API to make NASA technology project data available in a machine-readable format. Returns project title,\ndescription, benefits, status, dates, organizations, technology areas, and program. Useful for research\ndiscovery, technology scouting, and grant analysis.\n\n\nContact Support:\n Name: NASA TechPort",
+      "type": "text/plain"
+    }
+  }
+}

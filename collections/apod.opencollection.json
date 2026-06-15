@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "APOD",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Astronomy Picture of the Day",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/planetary/apod",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "The date of the APOD image to retrieve (YYYY-MM-DD). Defaults to today."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start of a date range (YYYY-MM-DD). Cannot be used with date."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End of a date range (YYYY-MM-DD). Defaults to today."
+              },
+              {
+                "name": "count",
+                "value": "",
+                "type": "query",
+                "description": "Return count randomly chosen images. Cannot be used with date or date range."
+              },
+              {
+                "name": "thumbs",
+                "value": "",
+                "type": "query",
+                "description": "Return the URL of a video thumbnail when the media type is video."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "api.nasa.gov key (or DEMO_KEY for evaluation)."
+              }
+            ]
+          },
+          "docs": "Get Astronomy Picture of the Day"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

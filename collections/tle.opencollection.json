@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA TLE API (Two-Line Element Set)",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TLE",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List TLE Records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tle.ivanstanojevic.me/api/tle",
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort-dir",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page-size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List TLE Records"
+        },
+        {
+          "info": {
+            "name": "Get TLE by Satellite ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tle.ivanstanojevic.me/api/tle/:satelliteId",
+            "params": [
+              {
+                "name": "satelliteId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get TLE by Satellite ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,302 @@
+{
+  "item": [
+    {
+      "id": "f2a510f0-0500-4669-8884-e1beaf7122c7",
+      "name": "Earth",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0853fc0d-14c6-4e7c-89d7-a847ee425ba4",
+          "name": "Get Earth Imagery",
+          "request": {
+            "name": "Get Earth Imagery",
+            "description": {},
+            "url": {
+              "path": [
+                "planetary",
+                "earth",
+                "imagery"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "lat",
+                  "value": "<float>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "lon",
+                  "value": "<float>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "dim",
+                  "value": "<float>",
+                  "description": "Width and height of image in degrees (default 0.025)."
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of image (YYYY-MM-DD). Returns image closest to this date."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e2893d8d-54bc-46e9-99e0-075d213d7515",
+              "name": "PNG image of Earth at the requested coordinate/date.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planetary",
+                    "earth",
+                    "imagery"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "lat",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "lon",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "dim",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/png"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "85a9c9bf-af2f-490b-979c-b06348744479",
+          "name": "Get Earth Imagery Asset Metadata",
+          "request": {
+            "name": "Get Earth Imagery Asset Metadata",
+            "description": {},
+            "url": {
+              "path": [
+                "planetary",
+                "earth",
+                "assets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "lat",
+                  "value": "<float>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "lon",
+                  "value": "<float>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "dim",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "12eb685b-6228-458c-a93a-3a768c739840",
+              "name": "Asset metadata for the requested coordinate.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planetary",
+                    "earth",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "lat",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "lon",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "dim",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"date\": \"string\",\n  \"id\": \"string\",\n  \"resource\": {},\n  \"service_version\": \"string\",\n  \"url\": \"http://kwnv.hrfe4bfoslrRAPl3FPP+g69Y7pu-MAoL,4uj3-tF9fQJmZn,GCtUcdUgO1kh-vakoNb1NYQ.B\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "793024d6-0945-42f4-b2cc-0702b83c3dad",
+    "name": "NASA Earth Imagery API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Unlock the significant public investment in earth observation data. Returns Landsat 8 imagery for a\ngiven latitude/longitude/date and asset metadata. Useful for deforestation monitoring, natural\ndisaster damage assessment, and other Earth surface change detection.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

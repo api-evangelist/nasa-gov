@@ -1,0 +1,584 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA SSD/CNEOS API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CAD",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Close Approach Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/cad.api",
+            "params": [
+              {
+                "name": "date-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dist-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dist-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "v-inf-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "v-inf-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "class",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pha",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nea",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "comet",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nea-comet",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "neo",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "kind",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "body",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "total-only",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "diameter",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fullname",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Close Approach Data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "SBDB",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Small Body Database Lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/sbdb.api",
+            "params": [
+              {
+                "name": "sstr",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "full-prec",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phys-par",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "discovery",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ca-data",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "virtual-impactor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-orbits",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "r-notes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "r-observer",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Small Body Database Lookup"
+        },
+        {
+          "info": {
+            "name": "Small Body Database Query",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/sbdb_query.api",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-kind",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-group",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-class",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-ns",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "full-prec",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Small Body Database Query"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sentry",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Sentry Impact Risk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/sentry.api",
+            "params": [
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ps-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ip-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "removed",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "all",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Sentry Impact Risk"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Fireball",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fireball Atmospheric Impact Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/fireball.api",
+            "params": [
+              {
+                "name": "date-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "energy-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "impact-e-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vel-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vel-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-loc",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-alt",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-vel",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-vel-comp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vel-comp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fireball Atmospheric Impact Events"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "NHATS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "NHATS - Human-Accessible Target Asteroids",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/nhats.api",
+            "params": [
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dv",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dur",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stay",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "launch",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "occ",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "plot",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "NHATS - Human-Accessible Target Asteroids"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Scout",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Scout - Near-Real-Time NEO Confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ssd-api.jpl.nasa.gov/scout.api",
+            "params": [
+              {
+                "name": "tdes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orbits",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "n-orbits",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "eph-start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "eph-stop",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "eph-step",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "obs-code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-diam",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-ra",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-dec",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-vmag",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "plot",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "file",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Scout - Near-Real-Time NEO Confirmation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

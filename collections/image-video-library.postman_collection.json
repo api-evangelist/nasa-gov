@@ -1,0 +1,541 @@
+{
+  "item": [
+    {
+      "id": "551a4ffe-7f4e-401c-9cf9-f787b9266e7a",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d0c367d3-4005-4393-a2df-474616e9d005",
+          "name": "Search NASA Image and Video Library",
+          "request": {
+            "name": "Search NASA Image and Video Library",
+            "description": {},
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Free text search terms."
+                },
+                {
+                  "disabled": false,
+                  "key": "center",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description_508",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "keywords",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "media_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nasa_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "photographer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "secondary_creator",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "title",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "year_start",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "year_end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0a48d490-99a3-40e9-b7dc-ccb18d84fe03",
+              "name": "Paged collection of matching media assets.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "center",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "description_508",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "keywords",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "media_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "nasa_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "photographer",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "secondary_creator",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "year_start",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "year_end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "91184aed-edbe-415c-bbc1-e8d4be4ac1f9",
+      "name": "Asset",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "62f46b7e-ab07-47aa-bb32-17296a773e26",
+          "name": "Get Media Asset Manifest",
+          "request": {
+            "name": "Get Media Asset Manifest",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":nasa_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "nasa_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a65db78e-72e5-4257-98c9-03e70d454d75",
+              "name": "List of asset file URLs (image variants, video renditions, captions).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":nasa_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "nasa_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8337e067-0f8b-4d3c-926a-8c494a9aee14",
+          "name": "Get Media Asset Metadata",
+          "request": {
+            "name": "Get Media Asset Metadata",
+            "description": {},
+            "url": {
+              "path": [
+                "metadata",
+                ":nasa_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "nasa_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c5f4e792-8e6b-4789-aaa9-02e9e9fb410a",
+              "name": "Pointer to JSON metadata location for the asset.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    ":nasa_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "nasa_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70d51fed-5cea-49bd-8ec9-b71b378a8895",
+          "name": "Get Video Asset Captions Location",
+          "request": {
+            "name": "Get Video Asset Captions Location",
+            "description": {},
+            "url": {
+              "path": [
+                "captions",
+                ":nasa_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "nasa_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8fec2e90-d3bb-4f2f-8cb3-0b8a25793d03",
+              "name": "Pointer to captions file (SRT/VTT) location for video assets.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "captions",
+                    ":nasa_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "nasa_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b3acb85f-4c68-4027-91c4-47a4f3d3cfb3",
+      "name": "Album",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a4dce042-4ba5-4f6e-b8cf-725a9a8cda4c",
+          "name": "Get Album Manifest",
+          "request": {
+            "name": "Get Album Manifest",
+            "description": {},
+            "url": {
+              "path": [
+                "album",
+                ":album_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "album_name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "606716f6-e7a6-4b1b-8ca3-de542542eb41",
+              "name": "Album contents.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "album",
+                    ":album_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "album_name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://images-api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "99a9de8a-dd9c-48af-b994-c9c57a6918c6",
+    "name": "NASA Image and Video Library API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for the NASA Image and Video Library at images.nasa.gov. Supports searching the library, retrieving\nasset manifests, metadata, captions, and resolving rich-text URLs.\n\n\nContact Support:\n Name: NASA Image and Video Library",
+      "type": "text/plain"
+    }
+  }
+}

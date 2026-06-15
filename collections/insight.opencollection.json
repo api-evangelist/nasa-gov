@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA InSight Mars Weather Service API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Weather",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get InSight Mars Weather",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/insight_weather/",
+            "params": [
+              {
+                "name": "ver",
+                "value": "",
+                "type": "query",
+                "description": "API version."
+              },
+              {
+                "name": "feedtype",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get InSight Mars Weather"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

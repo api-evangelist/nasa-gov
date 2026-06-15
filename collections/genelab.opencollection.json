@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA GeneLab Search API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search GeneLab Datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://genelab-data.ndc.nasa.gov/genelab/data/search",
+            "params": [
+              {
+                "name": "term",
+                "value": "",
+                "type": "query",
+                "description": "Free text search term."
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Data type filter (e.g. cgene, expr, comp)."
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query",
+                "description": "Result offset."
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results."
+              },
+              {
+                "name": "ffield",
+                "value": "",
+                "type": "query",
+                "description": "Filter field."
+              },
+              {
+                "name": "fvalue",
+                "value": "",
+                "type": "query",
+                "description": "Filter value."
+              }
+            ]
+          },
+          "docs": "Search GeneLab Datasets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

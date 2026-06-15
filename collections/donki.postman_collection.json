@@ -1,0 +1,1136 @@
+{
+  "item": [
+    {
+      "id": "82699981-b50e-4e9a-a8df-f4be4c284ba7",
+      "name": "DONKI",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "251c9219-37e3-439f-92ee-c739e48604c7",
+          "name": "Get Coronal Mass Ejections",
+          "request": {
+            "name": "Get Coronal Mass Ejections",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "CME"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de93c656-0c37-4dd4-be81-150cfb13aa24",
+              "name": "Array of CME records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "CME"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "94f4c52d-81be-4225-9485-7fbbdb05479e",
+          "name": "Get CME Analysis",
+          "request": {
+            "name": "Get CME Analysis",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "CMEAnalysis"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "mostAccurateOnly",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "speed",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "halfAngle",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "catalog",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "47ef41e8-3401-4155-9014-5193cabfb2ee",
+              "name": "Array of CME analysis records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "CMEAnalysis"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "mostAccurateOnly",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "speed",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "halfAngle",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "catalog",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "175c3e20-c36b-43d4-8639-d73199192df6",
+          "name": "Get Geomagnetic Storms",
+          "request": {
+            "name": "Get Geomagnetic Storms",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "GST"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a7fca8f1-552b-4733-84cf-b994a22819c2",
+              "name": "Array of geomagnetic storm records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "GST"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0fb4e9b1-57bd-4a8a-8f86-df32ced20338",
+          "name": "Get Interplanetary Shocks",
+          "request": {
+            "name": "Get Interplanetary Shocks",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "IPS"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "catalog",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e431b5b1-104d-497f-984b-c530d3f91f29",
+              "name": "Array of interplanetary shock records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "IPS"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "catalog",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "82828a62-a2c8-4484-936d-cd64f78c897d",
+          "name": "Get Solar Flares",
+          "request": {
+            "name": "Get Solar Flares",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "FLR"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bbdd5255-5ef1-47ac-a663-90245fd860f8",
+              "name": "Array of solar flare records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "FLR"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f1110d29-e7c7-4e22-9000-ad635fd83d0a",
+          "name": "Get Solar Energetic Particles",
+          "request": {
+            "name": "Get Solar Energetic Particles",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "SEP"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "39011372-f552-48cd-8bbf-5461ee82f47f",
+              "name": "Array of solar energetic particle records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "SEP"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e6ccd788-1e1a-4e94-81f7-deec99acb9a6",
+          "name": "Get Magnetopause Crossings",
+          "request": {
+            "name": "Get Magnetopause Crossings",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "MPC"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2ebfecce-64dc-4ece-9ee1-a956e65f905b",
+              "name": "Array of magnetopause crossing records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "MPC"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e2b9e46f-6cd8-4b0a-9cf6-0e1ffccf1ed8",
+          "name": "Get Radiation Belt Enhancements",
+          "request": {
+            "name": "Get Radiation Belt Enhancements",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "RBE"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e7738b60-6808-4b37-87f5-573192e6b4e9",
+              "name": "Array of radiation belt enhancement records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "RBE"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c294ae0a-e4c3-42b2-a1e7-2c12098ced57",
+          "name": "Get High Speed Streams",
+          "request": {
+            "name": "Get High Speed Streams",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "HSS"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "26fcf6da-85e3-4509-aef2-461f9de228bc",
+              "name": "Array of high speed stream records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "HSS"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "081e8edd-ab69-4aa6-9eaf-e7c9d233cfb6",
+          "name": "Get WSA+EnlilSimulations",
+          "request": {
+            "name": "Get WSA+EnlilSimulations",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "WSAEnlilSimulations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94e762a7-d93b-4d42-bf2a-2b6edd005606",
+              "name": "Array of WSA+Enlil simulation records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "WSAEnlilSimulations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "456d3ccf-f806-4f12-8b6b-6e82616da50a",
+          "name": "Get DONKI Notifications",
+          "request": {
+            "name": "Get DONKI Notifications",
+            "description": {},
+            "url": {
+              "path": [
+                "DONKI",
+                "notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Notification type filter. One of: all, FLR, SEP, CME, IPS, MPC, GST, RBE, report."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4c5a0f67-1e73-4795-8349-ff6ecaea9de7",
+              "name": "Array of notifications.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "DONKI",
+                    "notifications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ea34ee79-2e89-499a-829b-e011457f9517",
+    "name": "NASA DONKI Space Weather API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Space Weather Database Of Notifications, Knowledge, Information (DONKI) is a comprehensive online tool\nfor space weather forecasters, scientists, and the general public providing access to coronal mass\nejections, geomagnetic storms, interplanetary shocks, solar flares, solar energetic particles,\nmagnetopause crossings, radiation belt enhancements, and high-speed streams.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

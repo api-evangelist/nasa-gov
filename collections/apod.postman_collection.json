@@ -1,0 +1,361 @@
+{
+  "item": [
+    {
+      "id": "a14e1a32-c797-4420-b772-624651b25d0c",
+      "name": "APOD",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "798544d6-41f4-4b74-8605-2f20c90086d2",
+          "name": "Get Astronomy Picture of the Day",
+          "request": {
+            "name": "Get Astronomy Picture of the Day",
+            "description": {},
+            "url": {
+              "path": [
+                "planetary",
+                "apod"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "The date of the APOD image to retrieve (YYYY-MM-DD). Defaults to today."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start of a date range (YYYY-MM-DD). Cannot be used with date."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End of a date range (YYYY-MM-DD). Defaults to today."
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<integer>",
+                  "description": "Return count randomly chosen images. Cannot be used with date or date range."
+                },
+                {
+                  "disabled": false,
+                  "key": "thumbs",
+                  "value": "false",
+                  "description": "Return the URL of a video thumbnail when the media type is video."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) api.nasa.gov key (or DEMO_KEY for evaluation)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9080bfdc-76fe-4cb7-97be-51f729a8293b",
+              "name": "One APOD entry, an array of entries, or a list of random entries.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planetary",
+                    "apod"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "count",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumbs",
+                      "value": "false"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"date\": \"2015-06-21\",\n  \"explanation\": \"string\",\n  \"media_type\": \"image\",\n  \"title\": \"string\",\n  \"url\": \"https://VutQMpdhwCpkIZsLXgL.flrcHwoTiz8cGwYbgTIjoOybCXLaDNFEFsHsB3bJP,h.25oIs6x4JYJ8KGpA3\",\n  \"hdurl\": \"https://DK.rzVdPQjQWb1TZz0VKVNXJy4dQZiftnlIj2X4Pb8t-j17yVg3DQf2eALcOWTEpIx54\",\n  \"service_version\": \"string\",\n  \"copyright\": \"string\",\n  \"thumbnail_url\": \"http://pGVSQEwCupSeRvbG.peykMxZSSW.nzZCN-cb07DErvRCW+GT3QafB2MooBBAhEqiZfU+6P+5x\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0f2bd4a0-4540-4fc3-b1d7-0daf91c4c0ae",
+              "name": "Bad request (invalid date or parameter combination).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planetary",
+                    "apod"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "count",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumbs",
+                      "value": "false"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d20d7a78-755b-402c-a01c-60ce30b7de83",
+              "name": "Forbidden (invalid or missing api_key).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planetary",
+                    "apod"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "count",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumbs",
+                      "value": "false"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9ce2f2dc-97c9-45f6-92c8-85a317b14595",
+              "name": "Too many requests (rate limit exceeded).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planetary",
+                    "apod"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "count",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumbs",
+                      "value": "false"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ec67f5ae-fce9-481d-a225-758f079b72bd",
+    "name": "NASA Astronomy Picture of the Day (APOD) API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with\ntitle, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,\nrandom counts, and video thumbnails.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

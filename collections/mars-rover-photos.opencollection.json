@@ -1,0 +1,152 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Mars Rover Photos API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rovers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Mars Rovers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/mars-photos/api/v1/rovers",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List Mars Rovers"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Photos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Photos for a Rover",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/:rover/photos",
+            "params": [
+              {
+                "name": "rover",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sol",
+                "value": "",
+                "type": "query",
+                "description": "Martian sol the photos were taken on. One of sol or earth_date is required."
+              },
+              {
+                "name": "earth_date",
+                "value": "",
+                "type": "query",
+                "description": "Earth date the photos were taken on (YYYY-MM-DD)."
+              },
+              {
+                "name": "camera",
+                "value": "",
+                "type": "query",
+                "description": "Filter by camera abbreviation."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Photos for a Rover"
+        },
+        {
+          "info": {
+            "name": "Get Most Recent Photos for a Rover",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/:rover/latest_photos",
+            "params": [
+              {
+                "name": "rover",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Most Recent Photos for a Rover"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Manifests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Rover Mission Manifest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/mars-photos/api/v1/manifests/:rover",
+            "params": [
+              {
+                "name": "rover",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Rover Mission Manifest"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

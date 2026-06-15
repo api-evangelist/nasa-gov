@@ -1,0 +1,104 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Earth Imagery API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Earth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Earth Imagery",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/planetary/earth/imagery",
+            "params": [
+              {
+                "name": "lat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "lon",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dim",
+                "value": "",
+                "type": "query",
+                "description": "Width and height of image in degrees (default 0.025)."
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of image (YYYY-MM-DD). Returns image closest to this date."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Earth Imagery"
+        },
+        {
+          "info": {
+            "name": "Get Earth Imagery Asset Metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/planetary/earth/assets",
+            "params": [
+              {
+                "name": "lat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "lon",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dim",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Earth Imagery Asset Metadata"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

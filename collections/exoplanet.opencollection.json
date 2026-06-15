@@ -1,0 +1,76 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Exoplanet Archive API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TAP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Synchronous TAP Query",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+            "params": [
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "ADQL query string."
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "Response format."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Synchronous TAP Query"
+        },
+        {
+          "info": {
+            "name": "Asynchronous TAP Query",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/async",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "query",
+                  "value": ""
+                },
+                {
+                  "name": "format",
+                  "value": ""
+                },
+                {
+                  "name": "lang",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Asynchronous TAP Query"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

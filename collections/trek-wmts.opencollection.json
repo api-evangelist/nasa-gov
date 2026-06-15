@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Vesta/Moon/Mars Trek WMTS",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "WMTS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a Trek WMTS Tile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://trek.nasa.gov/tiles/:body/EQ/:layer/1.0.0/default/default028mm/:z/:y/:x.:ext",
+            "params": [
+              {
+                "name": "body",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "layer",
+                "value": "",
+                "type": "path",
+                "description": "Layer identifier within the Trek body catalog."
+              },
+              {
+                "name": "z",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "y",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "x",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "ext",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a Trek WMTS Tile"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

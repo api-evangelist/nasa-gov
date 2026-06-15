@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Asteroids NeoWs API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Asteroids",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Near Earth Object Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/neo/rest/v1/feed",
+            "params": [
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Start date of the feed (YYYY-MM-DD). Defaults to today."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "End date of the feed (YYYY-MM-DD). Defaults to 7 days after start_date."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve a list of asteroids based on closest approach date to Earth. Maximum date range is 7 days."
+        },
+        {
+          "info": {
+            "name": "Lookup a Specific Asteroid by NeoWs ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/neo/rest/v1/neo/:asteroid_id",
+            "params": [
+              {
+                "name": "asteroid_id",
+                "value": "",
+                "type": "path",
+                "description": "SPK-ID (small body identifier)."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lookup a Specific Asteroid by NeoWs ID"
+        },
+        {
+          "info": {
+            "name": "Browse the Overall Asteroid Dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/neo/rest/v1/neo/browse",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Browse the Overall Asteroid Dataset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

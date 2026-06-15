@@ -1,0 +1,207 @@
+{
+  "item": [
+    {
+      "id": "eac659b5-db4a-411f-8b08-4d11d9b7725a",
+      "name": "TLE",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a620ae85-5a94-4d3d-a92e-b86ce63325ec",
+          "name": "List TLE Records",
+          "request": {
+            "name": "List TLE Records",
+            "description": {},
+            "url": {
+              "path": [
+                "tle"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort-dir",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page-size",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6e39545b-415d-46e1-8906-6fcb3efa9ed3",
+              "name": "Paged list of TLE records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tle"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort-dir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page-size",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "11dfbdc5-e4ff-44c7-8478-9cc846a77733",
+          "name": "Get TLE by Satellite ID",
+          "request": {
+            "name": "Get TLE by Satellite ID",
+            "description": {},
+            "url": {
+              "path": [
+                "tle",
+                ":satelliteId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "satelliteId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b2c357d4-f899-4c25-94a8-a4de38f5664c",
+              "name": "TLE record with line1 and line2.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tle",
+                    ":satelliteId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "satelliteId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://tle.ivanstanojevic.me/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "562d4cf5-958c-47b9-bb74-fce25393dd31",
+    "name": "NASA TLE API (Two-Line Element Set)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Two-line element set (TLE) data for earth-orbiting objects at a given point in time. Listed in the NASA\nOpen APIs catalog and hosted at tle.ivanstanojevic.me. Returns satellite name, NORAD ID, line1, line2,\nand source attribution.\n",
+      "type": "text/plain"
+    }
+  }
+}

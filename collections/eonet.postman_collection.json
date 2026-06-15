@@ -1,0 +1,540 @@
+{
+  "item": [
+    {
+      "id": "f81827d2-a7c2-4338-8bfa-8e81cfa6aa8b",
+      "name": "Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "18fba418-a642-435e-9b1b-20c0b0fbc175",
+          "name": "Get Natural Events",
+          "request": {
+            "name": "Get Natural Events",
+            "description": {},
+            "url": {
+              "path": [
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>",
+                  "description": "Filter by source ID (comma-separated for multiple)."
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "days",
+                  "value": "<integer>",
+                  "description": "Limit to events within the last N days."
+                },
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "magID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "magMin",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "magMax",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<string>",
+                  "description": "Bounding box minlon,maxlat,maxlon,minlat."
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ec9fd231-3b34-4f0c-bbae-552001f39f59",
+              "name": "Collection of natural events.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "days",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "magID",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "magMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "magMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"link\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "67f4c87a-d2db-40be-ab9a-eea82a905f2c",
+      "name": "Categories",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7f2b3490-5008-406b-a808-7732f4117a9d",
+          "name": "Get Event Categories",
+          "request": {
+            "name": "Get Event Categories",
+            "description": {},
+            "url": {
+              "path": [
+                "categories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a0470243-0c18-4ec3-aae1-fb85d0dae755",
+              "name": "List of EONET event categories.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5c8adab9-3b10-464e-ae96-fe0aff96d03d",
+          "name": "Get Events for a Category",
+          "request": {
+            "name": "Get Events for a Category",
+            "description": {},
+            "url": {
+              "path": [
+                "categories",
+                ":category"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "category",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "165c6e2c-5e68-4853-8ab6-0abe1ef194ba",
+              "name": "Events in the specified category.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories",
+                    ":category"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "category",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "265c1c65-72e0-4f17-950a-aaff38e55290",
+      "name": "Sources",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b95f4de4-f8b5-4547-98d5-9081cb382f5e",
+          "name": "Get Event Sources",
+          "request": {
+            "name": "Get Event Sources",
+            "description": {},
+            "url": {
+              "path": [
+                "sources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "014402da-5384-4e92-9370-a0e26ab259b4",
+              "name": "List of EONET event data sources.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "6a0bc8ad-2038-4d4b-9e2c-f931044e9862",
+      "name": "Layers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "09534349-eeb1-4395-bf34-fce0b530bc06",
+          "name": "Get Layers",
+          "request": {
+            "name": "Get Layers",
+            "description": {},
+            "url": {
+              "path": [
+                "layers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "213aeabc-344b-435c-a3dc-0ba04f5f4989",
+              "name": "List of map layers associated with EONET categories.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "layers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "40384bdf-dc5a-42b1-bc94-8b1e4f7a6a09",
+      "name": "Magnitudes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1a3625bf-fbc2-4528-8d1f-fe754418ae71",
+          "name": "Get Magnitude Definitions",
+          "request": {
+            "name": "Get Magnitude Definitions",
+            "description": {},
+            "url": {
+              "path": [
+                "magnitudes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dda2a018-df61-43a3-9c7c-1b174c6c40aa",
+              "name": "Magnitude IDs and units defined by EONET.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "magnitudes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://eonet.gsfc.nasa.gov/api/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3bf488db-c102-4058-b138-9af87109cd42",
+    "name": "NASA EONET (Earth Observatory Natural Event Tracker)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Curated source of natural events occurring on Earth - wildfires, severe storms, volcanoes, sea/lake ice,\ndrought, dust/haze, earthquakes, floods, landslides, manmade, snow, temperature extremes, and water color.\n\n\nContact Support:\n Name: NASA Earth Observatory",
+      "type": "text/plain"
+    }
+  }
+}

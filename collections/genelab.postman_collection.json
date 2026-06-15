@@ -1,0 +1,149 @@
+{
+  "item": [
+    {
+      "id": "322722b2-b35a-432d-88d4-c94c7b0e8cf5",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "54ba2fe8-cb81-4483-ae3b-d502de14a68e",
+          "name": "Search GeneLab Datasets",
+          "request": {
+            "name": "Search GeneLab Datasets",
+            "description": {},
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "term",
+                  "value": "<string>",
+                  "description": "Free text search term."
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Data type filter (e.g. cgene, expr, comp)."
+                },
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<integer>",
+                  "description": "Result offset."
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>",
+                  "description": "Number of results."
+                },
+                {
+                  "disabled": false,
+                  "key": "ffield",
+                  "value": "<string>",
+                  "description": "Filter field."
+                },
+                {
+                  "disabled": false,
+                  "key": "fvalue",
+                  "value": "<string>",
+                  "description": "Filter value."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7b1fdb0f-a0f7-4345-aca7-e81ae0397779",
+              "name": "GeneLab search results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "term",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "ffield",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fvalue",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://genelab-data.ndc.nasa.gov/genelab/data",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "26d3db6f-ae5a-4b83-b536-8b79b4575e00",
+    "name": "NASA GeneLab Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Programmatic interface for GeneLab's public data repository - space biology omics datasets (genomic,\ntranscriptomic, proteomic, metabolomic, metagenomic) for organisms studied in spaceflight or\nspace-relevant environments.\n\n\nContact Support:\n Name: NASA GeneLab",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "item": [
+    {
+      "id": "e05386b2-8cae-4420-934b-56993a15df6f",
+      "name": "Observatories",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ab6f32d-0553-4fd3-8dfe-ed72aa95b018",
+          "name": "List Observatories",
+          "request": {
+            "name": "List Observatories",
+            "description": {},
+            "url": {
+              "path": [
+                "observatories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fac09463-23e2-466f-97e4-72847ae9a8ba",
+              "name": "List of available observatories (spacecraft).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "observatories"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "91f50230-2382-4fc3-a71a-d8754069b5f3",
+      "name": "Stations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "772bc0af-17e3-4d9d-b278-6794aff3fabf",
+          "name": "List Ground Stations",
+          "request": {
+            "name": "List Ground Stations",
+            "description": {},
+            "url": {
+              "path": [
+                "groundStations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "70377243-235e-45c1-aa8d-ad56c374b1a5",
+              "name": "List of ground stations.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groundStations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "126ab0d4-3141-4cdb-b392-d4b741038959",
+      "name": "Locations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9816dfab-e472-4de6-865a-14e3aa2a48f2",
+          "name": "Get Spacecraft Locations",
+          "request": {
+            "name": "Get Spacecraft Locations",
+            "description": {},
+            "url": {
+              "path": [
+                "locations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "observatories",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startTime",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTime",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "coords",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5afc26ae-6e03-4fa2-b4d2-0737e1da2222",
+              "name": "Spacecraft coordinate locations across the requested time range.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "locations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "observatories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "startTime",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTime",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coords",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://sscweb.gsfc.nasa.gov/WS/sscr/2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "72da1896-e9fa-4eb6-bee1-d0b6cfb62b19",
+    "name": "NASA Satellite Situation Center (SSC) Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "System to cast geocentric spacecraft location information into a framework of (empirical) geophysical\nregions and mappings of point locations along the spacecraft trajectory to/from locations of interest\n(e.g. magnetic conjunctions, IMF mappings).\n\n\nContact Support:\n Name: Satellite Situation Center",
+      "type": "text/plain"
+    }
+  }
+}

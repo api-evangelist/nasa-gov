@@ -1,0 +1,452 @@
+{
+  "item": [
+    {
+      "id": "0aef77e8-ceb1-4e9c-8895-7ce25b5d83e8",
+      "name": "Rovers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "86c43619-cd55-4c0e-b8b6-11bfe5d6f9b5",
+          "name": "List Mars Rovers",
+          "request": {
+            "name": "List Mars Rovers",
+            "description": {},
+            "url": {
+              "path": [
+                "rovers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e7be7043-93b3-4c91-98bb-c516769b6646",
+              "name": "List of rovers and their mission manifests.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rovers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "66327a4e-1e56-4d3b-a00c-d7440f9e4e9d",
+      "name": "Photos",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1e0525d8-4f0a-4329-9e56-8e444e0181dd",
+          "name": "Get Photos for a Rover",
+          "request": {
+            "name": "Get Photos for a Rover",
+            "description": {},
+            "url": {
+              "path": [
+                "rovers",
+                ":rover",
+                "photos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sol",
+                  "value": "<integer>",
+                  "description": "Martian sol the photos were taken on. One of sol or earth_date is required."
+                },
+                {
+                  "disabled": false,
+                  "key": "earth_date",
+                  "value": "<date>",
+                  "description": "Earth date the photos were taken on (YYYY-MM-DD)."
+                },
+                {
+                  "disabled": false,
+                  "key": "camera",
+                  "value": "<string>",
+                  "description": "Filter by camera abbreviation."
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "rover",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "790889af-8651-44a9-b3ed-68097569ce6e",
+              "name": "Photos taken on the requested sol/date.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rovers",
+                    ":rover",
+                    "photos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sol",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "earth_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "camera",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "rover",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "561ac681-0d1f-41d1-bac1-901c53354773",
+          "name": "Get Most Recent Photos for a Rover",
+          "request": {
+            "name": "Get Most Recent Photos for a Rover",
+            "description": {},
+            "url": {
+              "path": [
+                "rovers",
+                ":rover",
+                "latest_photos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "rover",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "418864c5-eeae-46fe-afa5-f0aa50112647",
+              "name": "Most recent photos returned by the rover.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rovers",
+                    ":rover",
+                    "latest_photos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "rover",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "250fd488-febd-463b-a79d-de11a2723a46",
+      "name": "Manifests",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "736fefca-6141-47e5-b14f-521f6fb048e3",
+          "name": "Get Rover Mission Manifest",
+          "request": {
+            "name": "Get Rover Mission Manifest",
+            "description": {},
+            "url": {
+              "path": [
+                "manifests",
+                ":rover"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "rover",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d2f37f78-c16a-4846-af68-01e2030609d9",
+              "name": "Mission manifest including landing date, launch date, status, max sol, max date, and per-sol photo counts.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manifests",
+                    ":rover"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "rover",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov/mars-photos/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "181e1872-c538-4be8-ae49-314e7acd06ca",
+    "name": "NASA Mars Rover Photos API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Image data gathered by NASA's Curiosity, Opportunity, Spirit, and Perseverance rovers on Mars. Each photo\ncan be queried by Earth date or Martian sol with optional camera filter.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

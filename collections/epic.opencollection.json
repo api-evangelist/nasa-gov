@@ -1,0 +1,170 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA EPIC (Earth Polychromatic Imaging Camera) API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Natural",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Most Recent Natural Color Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/natural",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Most Recent Natural Color Images"
+        },
+        {
+          "info": {
+            "name": "Get Natural Color Images by Date",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/natural/date/:date",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Natural Color Images by Date"
+        },
+        {
+          "info": {
+            "name": "Get Available Natural Color Dates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/natural/available",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Available Natural Color Dates"
+        },
+        {
+          "info": {
+            "name": "Get All Natural Color Image Dates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/natural/all",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get All Natural Color Image Dates"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Enhanced",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Most Recent Enhanced Color Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/enhanced",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Most Recent Enhanced Color Images"
+        },
+        {
+          "info": {
+            "name": "Get Enhanced Color Images by Date",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/enhanced/date/:date",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Enhanced Color Images by Date"
+        },
+        {
+          "info": {
+            "name": "Get Available Enhanced Color Dates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/EPIC/api/enhanced/available",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Available Enhanced Color Dates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

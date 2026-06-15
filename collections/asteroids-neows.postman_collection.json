@@ -1,0 +1,377 @@
+{
+  "item": [
+    {
+      "id": "a43eeaef-631f-4a1e-87d7-eb4cf48da6fc",
+      "name": "Asteroids",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b0ae9a8c-500b-40ca-bdf2-1acf26ae08cd",
+          "name": "Get Near Earth Object Feed",
+          "request": {
+            "name": "Get Near Earth Object Feed",
+            "description": {
+              "content": "Retrieve a list of asteroids based on closest approach date to Earth. Maximum date range is 7 days.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "neo",
+                "rest",
+                "v1",
+                "feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>",
+                  "description": "Start date of the feed (YYYY-MM-DD). Defaults to today."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>",
+                  "description": "End date of the feed (YYYY-MM-DD). Defaults to 7 days after start_date."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50bcdc52-3e18-4946-bfc3-adae80b33097",
+              "name": "Feed of near earth objects keyed by date.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "neo",
+                    "rest",
+                    "v1",
+                    "feed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "57c2059d-85ce-4599-bef5-170ecc4692eb",
+          "name": "Lookup a Specific Asteroid by NeoWs ID",
+          "request": {
+            "name": "Lookup a Specific Asteroid by NeoWs ID",
+            "description": {},
+            "url": {
+              "path": [
+                "neo",
+                "rest",
+                "v1",
+                "neo",
+                ":asteroid_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asteroid_id",
+                  "description": "(Required) SPK-ID (small body identifier)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23e1ab60-8990-4d7b-b8e3-19f3f96983c5",
+              "name": "Detailed asteroid record including orbital and close-approach data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "neo",
+                    "rest",
+                    "v1",
+                    "neo",
+                    ":asteroid_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asteroid_id",
+                      "description": "(Required) SPK-ID (small body identifier)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "14950874-78ab-4186-9a19-7eec9bd12e07",
+          "name": "Browse the Overall Asteroid Dataset",
+          "request": {
+            "name": "Browse the Overall Asteroid Dataset",
+            "description": {},
+            "url": {
+              "path": [
+                "neo",
+                "rest",
+                "v1",
+                "neo",
+                "browse"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "93139809-ae98-4f96-9cc7-5ab5d8c09aba",
+              "name": "Paged list of near earth objects.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "neo",
+                    "rest",
+                    "v1",
+                    "neo",
+                    "browse"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5768fdf7-c383-4434-a198-ba2ea445d153",
+    "name": "NASA Asteroids NeoWs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Near Earth Object Web Service - RESTful web service for near earth Asteroid information. Search asteroids\nby closest approach date (feed), look up a specific asteroid by NASA JPL small body ID, and browse the\noverall NeoWs dataset.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

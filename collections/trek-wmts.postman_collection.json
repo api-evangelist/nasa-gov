@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "91460ce9-ca37-4211-acf8-14edb6aca942",
+      "name": "WMTS",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "02285242-6fc1-4610-9a0c-3fec7850e1fc",
+          "name": "Get a Trek WMTS Tile",
+          "request": {
+            "name": "Get a Trek WMTS Tile",
+            "description": {},
+            "url": {
+              "path": [
+                "tiles",
+                ":body",
+                "EQ",
+                ":layer",
+                "1.0.0",
+                "default",
+                "default028mm",
+                ":z",
+                ":y",
+                "{{x}}.{{ext}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "body",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "layer",
+                  "description": "(Required) Layer identifier within the Trek body catalog."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "z",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "y",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f36ec21d-d4a8-47d4-9d0c-1493d74175ce",
+              "name": "A WMTS map tile.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tiles",
+                    ":body",
+                    "EQ",
+                    ":layer",
+                    "1.0.0",
+                    "default",
+                    "default028mm",
+                    ":z",
+                    ":y",
+                    "{{x}}.{{ext}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "body",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "layer",
+                      "description": "(Required) Layer identifier within the Trek body catalog."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "z",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "y",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/png"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://trek.nasa.gov",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<integer>",
+      "key": "x"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "ext"
+    }
+  ],
+  "info": {
+    "_postman_id": "ad0543b0-31fc-4f64-8ed8-63cc79a6d634",
+    "name": "NASA Vesta/Moon/Mars Trek WMTS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "A Web Map Tile Service (WMTS) for the Vesta, Moon, and Mars Trek imagery projects. Standardized OGC WMTS\ntiles consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.\n\n\nContact Support:\n Name: NASA Trek",
+      "type": "text/plain"
+    }
+  }
+}

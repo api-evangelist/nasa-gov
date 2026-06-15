@@ -1,0 +1,394 @@
+{
+  "item": [
+    {
+      "id": "e38979b2-31b0-4a1e-aead-c097129b5e37",
+      "name": "Patents",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0d97721e-080c-47f4-a0a1-275871aed436",
+          "name": "Search NASA Patents",
+          "request": {
+            "name": "Search NASA Patents",
+            "description": {},
+            "url": {
+              "path": [
+                "patent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "patent",
+                  "value": "<string>",
+                  "description": "Search term to match against patent metadata."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c01a46a7-fe90-4987-9504-e6824c7edf76",
+              "name": "Matching patent records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "patent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15051038-a136-4b80-a938-e3912797c178",
+          "name": "Search Issued NASA Patents",
+          "request": {
+            "name": "Search Issued NASA Patents",
+            "description": {},
+            "url": {
+              "path": [
+                "patent",
+                "issued"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "patent_issued",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b86b9a1a-8c94-4a7f-b78e-e3d5cfc8707f",
+              "name": "Matching issued patent records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patent",
+                    "issued"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "patent_issued",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "a498ac9f-5983-4a65-b0e1-9e890731f5b9",
+      "name": "Software",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c087bbfc-e12b-419f-810e-bc94242e7347",
+          "name": "Search NASA Software",
+          "request": {
+            "name": "Search NASA Software",
+            "description": {},
+            "url": {
+              "path": [
+                "software"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "software",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a76e2c4-c4d1-44fc-b3d5-ca3f19adbb3d",
+              "name": "Matching software records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "software",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0818c57f-5f46-4245-9370-ba2d553f3ca4",
+      "name": "Spinoff",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "259b6e0a-4e07-4e58-9ceb-1b6ca2edb6c8",
+          "name": "Search NASA Spinoff Publications",
+          "request": {
+            "name": "Search NASA Spinoff Publications",
+            "description": {},
+            "url": {
+              "path": [
+                "spinoff"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Spinoff",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "652b0813-b5dd-4ac6-b0e5-68efdd6c2896",
+              "name": "Matching spinoff publication records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spinoff"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Spinoff",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov/techtransfer",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "35ad8c6b-4bf3-4927-b8d7-b2a81edc8a69",
+    "name": "NASA TechTransfer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Structured, searchable developer access to NASA's patents, software, and Spinoff publications. Patents are\npart of the NASA Technology Transfer Program with the goal of bringing NASA technology down to Earth.\n\n\nContact Support:\n Name: NASA Technology Transfer",
+      "type": "text/plain"
+    }
+  }
+}

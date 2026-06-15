@@ -1,0 +1,392 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA DONKI Space Weather API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DONKI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Coronal Mass Ejections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/CME",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Coronal Mass Ejections"
+        },
+        {
+          "info": {
+            "name": "Get CME Analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/CMEAnalysis",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "mostAccurateOnly",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "speed",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "halfAngle",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get CME Analysis"
+        },
+        {
+          "info": {
+            "name": "Get Geomagnetic Storms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/GST",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Geomagnetic Storms"
+        },
+        {
+          "info": {
+            "name": "Get Interplanetary Shocks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/IPS",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Interplanetary Shocks"
+        },
+        {
+          "info": {
+            "name": "Get Solar Flares",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/FLR",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Solar Flares"
+        },
+        {
+          "info": {
+            "name": "Get Solar Energetic Particles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/SEP",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Solar Energetic Particles"
+        },
+        {
+          "info": {
+            "name": "Get Magnetopause Crossings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/MPC",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Magnetopause Crossings"
+        },
+        {
+          "info": {
+            "name": "Get Radiation Belt Enhancements",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/RBE",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Radiation Belt Enhancements"
+        },
+        {
+          "info": {
+            "name": "Get High Speed Streams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/HSS",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get High Speed Streams"
+        },
+        {
+          "info": {
+            "name": "Get WSA+EnlilSimulations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/WSAEnlilSimulations",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get WSA+EnlilSimulations"
+        },
+        {
+          "info": {
+            "name": "Get DONKI Notifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/DONKI/notifications",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time."
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date (YYYY-MM-DD). Defaults to current UTC time."
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Notification type filter. One of: all, FLR, SEP, CME, IPS, MPC, GST, RBE, report."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get DONKI Notifications"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

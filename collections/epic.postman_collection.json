@@ -1,0 +1,617 @@
+{
+  "item": [
+    {
+      "id": "57195def-e801-4985-9453-05836c8a9cbd",
+      "name": "Natural",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f4f138ef-abcd-4538-befc-6bf8946debde",
+          "name": "Get Most Recent Natural Color Images",
+          "request": {
+            "name": "Get Most Recent Natural Color Images",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "natural"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "745be184-7c63-49b3-8958-3fab8620553a",
+              "name": "Metadata for the most recent natural color EPIC images.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "natural"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "10a14670-b6ac-49a3-a22c-bc7fd7d3207f",
+          "name": "Get Natural Color Images by Date",
+          "request": {
+            "name": "Get Natural Color Images by Date",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "natural",
+                "date",
+                ":date"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<date>",
+                  "key": "date",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "79be22f0-33d6-4806-b9dc-767536b2fabd",
+              "name": "Metadata for natural color EPIC images taken on the given date.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "natural",
+                    "date",
+                    ":date"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<date>",
+                      "key": "date",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6b8d69ad-5b1c-46df-b128-1b420431ff3f",
+          "name": "Get Available Natural Color Dates",
+          "request": {
+            "name": "Get Available Natural Color Dates",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "natural",
+                "available"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b7bd9be8-14fc-4fa5-86e2-7b9397ef5a0a",
+              "name": "List of dates for which natural color images are available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "natural",
+                    "available"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "546fa427-61fd-40b7-b3d9-e98c896d98e3",
+          "name": "Get All Natural Color Image Dates",
+          "request": {
+            "name": "Get All Natural Color Image Dates",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "natural",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "10f604fa-9d19-40df-a655-dfc0afe68fc6",
+              "name": "All dates with natural color image counts.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "natural",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "bc221085-181f-4ae5-8e8f-5f3743c4fcee",
+      "name": "Enhanced",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "758f9ba9-03d7-46a8-a9cb-96bfe3c0a596",
+          "name": "Get Most Recent Enhanced Color Images",
+          "request": {
+            "name": "Get Most Recent Enhanced Color Images",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "enhanced"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "863a1bf5-fe45-4ad9-9dc6-842f184522a2",
+              "name": "Metadata for the most recent enhanced color EPIC images.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "enhanced"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c57c8c6c-2e21-49b8-a80f-39a820a1720a",
+          "name": "Get Enhanced Color Images by Date",
+          "request": {
+            "name": "Get Enhanced Color Images by Date",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "enhanced",
+                "date",
+                ":date"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<date>",
+                  "key": "date",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c12459e8-c083-453f-b10a-274da392f097",
+              "name": "Metadata for enhanced color EPIC images taken on the given date.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "enhanced",
+                    "date",
+                    ":date"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<date>",
+                      "key": "date",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6690d644-8379-4508-9c5f-bd212d1244c8",
+          "name": "Get Available Enhanced Color Dates",
+          "request": {
+            "name": "Get Available Enhanced Color Dates",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "enhanced",
+                "available"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef0b50cc-f929-4fd0-a800-901a6d046654",
+              "name": "List of dates for which enhanced color images are available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "enhanced",
+                    "available"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov/EPIC",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1516dea7-d0e2-4738-98e9-e631d30c717d",
+    "name": "NASA EPIC (Earth Polychromatic Imaging Camera) API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The DSCOVR EPIC instrument provides full-disc imagery of Earth and captures unique perspectives of certain\nastronomical events such as lunar transits. The API returns natural and enhanced color image metadata with\ncentroid coordinates, spacecraft, sun, and lunar positions.\n\n\nContact Support:\n Name: NASA EPIC",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Image and Video Library API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search NASA Image and Video Library",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://images-api.nasa.gov/search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Free text search terms."
+              },
+              {
+                "name": "center",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "description_508",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "keywords",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "media_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nasa_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "photographer",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "secondary_creator",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "title",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "year_start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "year_end",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search NASA Image and Video Library"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Asset",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Media Asset Manifest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://images-api.nasa.gov/asset/:nasa_id",
+            "params": [
+              {
+                "name": "nasa_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Media Asset Manifest"
+        },
+        {
+          "info": {
+            "name": "Get Media Asset Metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://images-api.nasa.gov/metadata/:nasa_id",
+            "params": [
+              {
+                "name": "nasa_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Media Asset Metadata"
+        },
+        {
+          "info": {
+            "name": "Get Video Asset Captions Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://images-api.nasa.gov/captions/:nasa_id",
+            "params": [
+              {
+                "name": "nasa_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Video Asset Captions Location"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Album",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Album Manifest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://images-api.nasa.gov/album/:album_name",
+            "params": [
+              {
+                "name": "album_name",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Album Manifest"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

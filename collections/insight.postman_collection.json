@@ -1,0 +1,151 @@
+{
+  "item": [
+    {
+      "id": "83773901-5661-417c-b674-7b100ca6762b",
+      "name": "Weather",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "12a114f9-f0aa-4785-8983-9ed8dd255b16",
+          "name": "Get InSight Mars Weather",
+          "request": {
+            "name": "Get InSight Mars Weather",
+            "description": {},
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ver",
+                  "value": "1.0",
+                  "description": "API version."
+                },
+                {
+                  "disabled": false,
+                  "key": "feedtype",
+                  "value": "json"
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "DEMO_KEY",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cfd98e1a-5d41-48bb-a761-f323c5af7b08",
+              "name": "Per-Sol weather summary for the most recent seven sols.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ver",
+                      "value": "1.0"
+                    },
+                    {
+                      "key": "feedtype",
+                      "value": "json"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "DEMO_KEY"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov/insight_weather",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8295328f-fb52-4c0a-befc-7d26ba11bcc4",
+    "name": "NASA InSight Mars Weather Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Per-Sol summary data for each of the last seven available Sols (Martian days) of weather at Elysium Planitia\nas measured by the InSight lander. Reports temperature, wind, and pressure. NOTE - InSight ended operations\nin December 2022; data exposed by this endpoint is historical.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA EONET (Earth Observatory Natural Event Tracker)",
+    "version": "3.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Natural Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eonet.gsfc.nasa.gov/api/v3/events",
+            "params": [
+              {
+                "name": "source",
+                "value": "",
+                "type": "query",
+                "description": "Filter by source ID (comma-separated for multiple)."
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "days",
+                "value": "",
+                "type": "query",
+                "description": "Limit to events within the last N days."
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "magID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "magMin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "magMax",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query",
+                "description": "Bounding box minlon,maxlat,maxlon,minlat."
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Natural Events"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Event Categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eonet.gsfc.nasa.gov/api/v3/categories"
+          },
+          "docs": "Get Event Categories"
+        },
+        {
+          "info": {
+            "name": "Get Events for a Category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eonet.gsfc.nasa.gov/api/v3/categories/:category",
+            "params": [
+              {
+                "name": "category",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Events for a Category"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sources",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Event Sources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eonet.gsfc.nasa.gov/api/v3/sources"
+          },
+          "docs": "Get Event Sources"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Layers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eonet.gsfc.nasa.gov/api/v3/layers"
+          },
+          "docs": "Get Layers"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Magnitudes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Magnitude Definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eonet.gsfc.nasa.gov/api/v3/magnitudes"
+          },
+          "docs": "Get Magnitude Definitions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
