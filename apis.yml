@@ -346,6 +346,10 @@ x-type: government
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+  - type: DomainSecurity
+    url: security/nasa-gov-domain-security.yml
+  - type: Authentication
+    url: authentication/nasa-gov-authentication.yml
   - url: https://api.nasa.gov/
     name: NASA Open APIs Portal
     type: Portal

@@ -1,0 +1,25 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/apod-openapi.yml, openapi/asteroids-neows-openapi.yml, openapi/donki-openapi.yml,
+  openapi/earth-openapi.yml, openapi/epic-openapi.yml, openapi/insight-openapi.yml, openapi/mars-rover-photos-openapi.yml,
+  openapi/techport-openapi.yml, openapi/techtransfer-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: query
+  parameter: api_key
+  sources:
+  - openapi/apod-openapi.yml
+  - openapi/asteroids-neows-openapi.yml
+  - openapi/donki-openapi.yml
+  - openapi/earth-openapi.yml
+  - openapi/epic-openapi.yml
+  - openapi/insight-openapi.yml
+  - openapi/mars-rover-photos-openapi.yml
+  - openapi/techport-openapi.yml
+  - openapi/techtransfer-openapi.yml
