@@ -1,17 +1,27 @@
 openapi: 3.0.3
 info:
-  title: NASA EONET (Earth Observatory Natural Event Tracker)
-  description: |
-    Curated source of natural events occurring on Earth - wildfires, severe storms, volcanoes, sea/lake ice,
-    drought, dust/haze, earthquakes, floods, landslides, manmade, snow, temperature extremes, and water color.
-  version: '3.0'
+  title: NASA Astronomy Picture of the Day (APOD) Album Events API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
   contact:
-    name: NASA Earth Observatory
-    url: https://eonet.gsfc.nasa.gov/docs/v3
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://eonet.gsfc.nasa.gov/api/v3
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: Events
 paths:
   /events:
     get:
@@ -91,54 +101,9 @@ paths:
                     type: array
                     items:
                       type: object
-  /categories:
-    get:
-      summary: Get Event Categories
-      operationId: getCategories
-      tags:
-      - Categories
-      responses:
-        '200':
-          description: List of EONET event categories.
-  /categories/{category}:
-    get:
-      summary: Get Events for a Category
-      operationId: getEventsByCategory
-      tags:
-      - Categories
-      parameters:
-      - name: category
-        in: path
-        required: true
-        schema:
-          type: string
-      responses:
-        '200':
-          description: Events in the specified category.
-  /sources:
-    get:
-      summary: Get Event Sources
-      operationId: getSources
-      tags:
-      - Sources
-      responses:
-        '200':
-          description: List of EONET event data sources.
-  /layers:
-    get:
-      summary: Get Layers
-      operationId: getLayers
-      tags:
-      - Layers
-      responses:
-        '200':
-          description: List of map layers associated with EONET categories.
-  /magnitudes:
-    get:
-      summary: Get Magnitude Definitions
-      operationId: getMagnitudes
-      tags:
-      - Magnitudes
-      responses:
-        '200':
-          description: Magnitude IDs and units defined by EONET.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

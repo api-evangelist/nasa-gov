@@ -1,10 +1,13 @@
 openapi: 3.0.3
 info:
-  title: NASA Asteroids NeoWs API
-  description: |
-    Near Earth Object Web Service - RESTful web service for near earth Asteroid information. Search asteroids
-    by closest approach date (feed), look up a specific asteroid by NASA JPL small body ID, and browse the
-    overall NeoWs dataset.
+  title: NASA Astronomy Picture of the Day (APOD) Album Asteroids API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
     name: NASA Open APIs
@@ -17,6 +20,8 @@ servers:
   description: NASA Open API gateway via api.data.gov
 security:
 - ApiKeyAuth: []
+tags:
+- name: Asteroids
 paths:
   /neo/rest/v1/feed:
     get:

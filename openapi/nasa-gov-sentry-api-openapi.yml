@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) Album Sentry API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: Sentry
+paths:
+  /sentry.api:
+    get:
+      summary: Sentry Impact Risk
+      operationId: sentry
+      tags:
+      - Sentry
+      parameters:
+      - name: spk
+        in: query
+        schema:
+          type: string
+      - name: des
+        in: query
+        schema:
+          type: string
+      - name: h-max
+        in: query
+        schema:
+          type: number
+      - name: ps-min
+        in: query
+        schema:
+          type: number
+      - name: ip-min
+        in: query
+        schema:
+          type: number
+      - name: removed
+        in: query
+        schema:
+          type: boolean
+      - name: all
+        in: query
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Sentry impact risk table.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

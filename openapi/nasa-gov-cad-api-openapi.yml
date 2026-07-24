@@ -1,0 +1,133 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) Album CAD API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: CAD
+paths:
+  /cad.api:
+    get:
+      summary: Close Approach Data
+      operationId: getCAD
+      tags:
+      - CAD
+      parameters:
+      - name: date-min
+        in: query
+        schema:
+          type: string
+      - name: date-max
+        in: query
+        schema:
+          type: string
+      - name: dist-min
+        in: query
+        schema:
+          type: string
+      - name: dist-max
+        in: query
+        schema:
+          type: string
+      - name: h-min
+        in: query
+        schema:
+          type: number
+      - name: h-max
+        in: query
+        schema:
+          type: number
+      - name: v-inf-min
+        in: query
+        schema:
+          type: number
+      - name: v-inf-max
+        in: query
+        schema:
+          type: number
+      - name: class
+        in: query
+        schema:
+          type: string
+      - name: pha
+        in: query
+        schema:
+          type: boolean
+      - name: nea
+        in: query
+        schema:
+          type: boolean
+      - name: comet
+        in: query
+        schema:
+          type: boolean
+      - name: nea-comet
+        in: query
+        schema:
+          type: boolean
+      - name: neo
+        in: query
+        schema:
+          type: boolean
+      - name: kind
+        in: query
+        schema:
+          type: string
+      - name: spk
+        in: query
+        schema:
+          type: string
+      - name: des
+        in: query
+        schema:
+          type: string
+      - name: body
+        in: query
+        schema:
+          type: string
+      - name: sort
+        in: query
+        schema:
+          type: string
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: total-only
+        in: query
+        schema:
+          type: boolean
+      - name: diameter
+        in: query
+        schema:
+          type: boolean
+      - name: fullname
+        in: query
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Close approach data table.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

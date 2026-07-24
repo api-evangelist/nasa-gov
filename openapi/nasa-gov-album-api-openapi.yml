@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) Album API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: Album
+paths:
+  /album/{album_name}:
+    get:
+      summary: Get Album Manifest
+      operationId: getAlbum
+      tags:
+      - Album
+      parameters:
+      - name: album_name
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Album contents.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

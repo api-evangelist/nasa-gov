@@ -1,10 +1,13 @@
 openapi: 3.0.3
 info:
-  title: NASA Astronomy Picture of the Day (APOD) API
-  description: |
-    One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+  title: NASA Astronomy Picture of the Day () Album APOD API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
     title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
     random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
     name: NASA Open APIs
@@ -17,6 +20,8 @@ servers:
   description: NASA Open API gateway via api.data.gov
 security:
 - ApiKeyAuth: []
+tags:
+- name: APOD
 paths:
   /planetary/apod:
     get:
@@ -81,11 +86,6 @@ paths:
         '429':
           description: Too many requests (rate limit exceeded).
 components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: query
-      name: api_key
   schemas:
     ApodEntry:
       type: object
@@ -128,3 +128,8 @@ components:
           type: string
           format: uri
           description: Video thumbnail URL when thumbs=true and media_type=video.
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

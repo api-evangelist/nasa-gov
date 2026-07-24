@@ -1,17 +1,27 @@
 openapi: 3.0.3
 info:
-  title: NASA Vesta/Moon/Mars Trek WMTS
-  description: |
-    A Web Map Tile Service (WMTS) for the Vesta, Moon, and Mars Trek imagery projects. Standardized OGC WMTS
-    tiles consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.
+  title: NASA Astronomy Picture of the Day (APOD) Album WMTS API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
-    name: NASA Trek
-    url: https://trek.nasa.gov/
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://trek.nasa.gov
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: WMTS
 paths:
   /tiles/{body}/EQ/{layer}/1.0.0/default/default028mm/{z}/{y}/{x}.{ext}:
     get:
@@ -70,3 +80,9 @@ paths:
               schema:
                 type: string
                 format: binary
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

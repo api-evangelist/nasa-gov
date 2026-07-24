@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) Album NHATS API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: NHATS
+paths:
+  /nhats.api:
+    get:
+      summary: NHATS - Human-Accessible Target Asteroids
+      operationId: nhats
+      tags:
+      - NHATS
+      parameters:
+      - name: spk
+        in: query
+        schema:
+          type: string
+      - name: des
+        in: query
+        schema:
+          type: string
+      - name: dv
+        in: query
+        schema:
+          type: number
+      - name: dur
+        in: query
+        schema:
+          type: integer
+      - name: stay
+        in: query
+        schema:
+          type: integer
+      - name: launch
+        in: query
+        schema:
+          type: string
+      - name: h
+        in: query
+        schema:
+          type: number
+      - name: occ
+        in: query
+        schema:
+          type: integer
+      - name: plot
+        in: query
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: NHATS summary or single-object detail.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

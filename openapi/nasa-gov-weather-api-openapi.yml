@@ -1,20 +1,27 @@
 openapi: 3.0.3
 info:
-  title: NASA InSight Mars Weather Service API
-  description: |
-    Per-Sol summary data for each of the last seven available Sols (Martian days) of weather at Elysium Planitia
-    as measured by the InSight lander. Reports temperature, wind, and pressure. NOTE - InSight ended operations
-    in December 2022; data exposed by this endpoint is historical.
+  title: NASA Astronomy Picture of the Day (APOD) Album Weather API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
     name: NASA Open APIs
     url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://api.nasa.gov/insight_weather
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
 security:
 - ApiKeyAuth: []
+tags:
+- name: Weather
 paths:
   /:
     get:

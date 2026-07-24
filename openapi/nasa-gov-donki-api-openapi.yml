@@ -1,21 +1,27 @@
 openapi: 3.0.3
 info:
-  title: NASA DONKI Space Weather API
-  description: |
-    Space Weather Database Of Notifications, Knowledge, Information (DONKI) is a comprehensive online tool
-    for space weather forecasters, scientists, and the general public providing access to coronal mass
-    ejections, geomagnetic storms, interplanetary shocks, solar flares, solar energetic particles,
-    magnetopause crossings, radiation belt enhancements, and high-speed streams.
+  title: NASA Astronomy Picture of the Day (APOD) Album DONKI API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
     name: NASA Open APIs
     url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
 - url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
 security:
 - ApiKeyAuth: []
+tags:
+- name: DONKI
 paths:
   /DONKI/CME:
     get:
@@ -190,19 +196,7 @@ paths:
         '200':
           description: Array of notifications.
 components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: query
-      name: api_key
   parameters:
-    StartDate:
-      name: startDate
-      in: query
-      description: Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time.
-      schema:
-        type: string
-        format: date
     EndDate:
       name: endDate
       in: query
@@ -217,3 +211,15 @@ components:
       schema:
         type: string
         default: DEMO_KEY
+    StartDate:
+      name: startDate
+      in: query
+      description: Start date (YYYY-MM-DD). Defaults to 30 days prior to current UTC time.
+      schema:
+        type: string
+        format: date
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

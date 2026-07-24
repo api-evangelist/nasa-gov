@@ -1,18 +1,27 @@
 openapi: 3.0.3
 info:
-  title: NASA Exoplanet Archive API
-  description: |
-    Programmatic access to NASA's Exoplanet Archive - confirmed planets, planetary candidates, Kepler/K2/TESS
-    objects of interest, microlensing events, and direct imaging detections. Uses the IPAC Table Access
-    Protocol (TAP) with ADQL queries returning CSV, JSON, VOTable, or IPAC ASCII.
+  title: NASA Astronomy Picture of the Day (APOD) Album TAP API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
-    name: NASA Exoplanet Archive
-    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://exoplanetarchive.ipac.caltech.edu/TAP
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: TAP
 paths:
   /sync:
     get:
@@ -67,3 +76,9 @@ paths:
       responses:
         '303':
           description: Redirect to job status endpoint.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

@@ -1,0 +1,78 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) Album Enhanced API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: Enhanced
+paths:
+  /api/enhanced:
+    get:
+      summary: Get Most Recent Enhanced Color Images
+      operationId: getEnhancedRecent
+      tags:
+      - Enhanced
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Metadata for the most recent enhanced color EPIC images.
+  /api/enhanced/date/{date}:
+    get:
+      summary: Get Enhanced Color Images by Date
+      operationId: getEnhancedByDate
+      tags:
+      - Enhanced
+      parameters:
+      - name: date
+        in: path
+        required: true
+        schema:
+          type: string
+          format: date
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Metadata for enhanced color EPIC images taken on the given date.
+  /api/enhanced/available:
+    get:
+      summary: Get Available Enhanced Color Dates
+      operationId: getEnhancedAvailable
+      tags:
+      - Enhanced
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of dates for which enhanced color images are available.
+components:
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+        default: DEMO_KEY
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

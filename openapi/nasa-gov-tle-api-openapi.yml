@@ -1,17 +1,27 @@
 openapi: 3.0.3
 info:
-  title: NASA TLE API (Two-Line Element Set)
-  description: |
-    Two-line element set (TLE) data for earth-orbiting objects at a given point in time. Listed in the NASA
-    Open APIs catalog and hosted at tle.ivanstanojevic.me. Returns satellite name, NORAD ID, line1, line2,
-    and source attribution.
+  title: NASA Astronomy Picture of the Day (APOD) Album TLE API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
   version: '1.0'
   contact:
-    url: https://tle.ivanstanojevic.me/
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
   license:
-    name: Open Data
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://tle.ivanstanojevic.me/api
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: TLE
 paths:
   /tle:
     get:
@@ -32,9 +42,9 @@ paths:
           - id
           - name
           - popularity
-          - '-id'
-          - '-name'
-          - '-popularity'
+          - -id
+          - -name
+          - -popularity
       - name: sort-dir
         in: query
         schema:
@@ -65,3 +75,9 @@ paths:
       responses:
         '200':
           description: TLE record with line1 and line2.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key

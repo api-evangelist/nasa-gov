@@ -1,0 +1,93 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) Album Scout API
+  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+
+    random counts, and video thumbnails.
+
+    '
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+tags:
+- name: Scout
+paths:
+  /scout.api:
+    get:
+      summary: Scout - Near-Real-Time NEO Confirmation
+      operationId: scout
+      tags:
+      - Scout
+      parameters:
+      - name: tdes
+        in: query
+        schema:
+          type: string
+      - name: orbits
+        in: query
+        schema:
+          type: boolean
+      - name: n-orbits
+        in: query
+        schema:
+          type: integer
+      - name: eph-start
+        in: query
+        schema:
+          type: string
+      - name: eph-stop
+        in: query
+        schema:
+          type: string
+      - name: eph-step
+        in: query
+        schema:
+          type: string
+      - name: obs-code
+        in: query
+        schema:
+          type: string
+      - name: fov-diam
+        in: query
+        schema:
+          type: number
+      - name: fov-ra
+        in: query
+        schema:
+          type: string
+      - name: fov-dec
+        in: query
+        schema:
+          type: string
+      - name: fov-vmag
+        in: query
+        schema:
+          type: number
+      - name: plot
+        in: query
+        schema:
+          type: boolean
+      - name: file
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Scout summary or per-object detail.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
