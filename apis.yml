@@ -1,334 +1,1638 @@
 aid: nasa-gov
 url: https://raw.githubusercontent.com/api-evangelist/nasa-gov/refs/heads/main/apis.yml
 apis:
-  - aid: nasa-gov:apod
-    name: NASA Astronomy Picture of the Day (APOD)
-    tags:
-      - Astronomy
-      - Imagery
-      - Space
-      - NASA
-    humanURL: https://api.nasa.gov/
-    baseURL: https://api.nasa.gov/planetary/apod
-    properties:
-      - url: https://api.nasa.gov/
-        type: Documentation
-      - url: https://github.com/nasa/apod-api
-        type: SourceCode
-      - url: openapi/apod-openapi.yml
-        type: OpenAPI
-      - url: json-schema/apod-schema.json
-        type: JSONSchema
-    description: >-
-      One of the most popular NASA websites, exposed as a JSON API. Returns the picture (or video) of the day with
-      title, explanation, image URL, HD URL, optional copyright, and media type. Supports date, start_date/end_date
-      ranges, count for random selections, and thumbs for video thumbnails.
-  - aid: nasa-gov:asteroids-neows
-    name: NASA Asteroids NeoWs (Near Earth Object Web Service)
-    tags:
-      - Asteroids
-      - Astronomy
-      - Near Earth Objects
-      - NASA
-    humanURL: https://api.nasa.gov/
-    baseURL: https://api.nasa.gov/neo/rest/v1
-    properties:
-      - url: https://api.nasa.gov/
-        type: Documentation
-      - url: https://github.com/SpaceRocks/NeoWs
-        type: SourceCode
-      - url: openapi/asteroids-neows-openapi.yml
-        type: OpenAPI
-    description: >-
-      RESTful web service for near earth Asteroid information. Lets you search for asteroids by closest approach date,
-      lookup a specific asteroid by NASA JPL small body ID, and browse the overall dataset. Endpoints include /feed,
-      /neo/{id}, and /neo/browse.
-  - aid: nasa-gov:donki
-    name: NASA DONKI Space Weather API
-    tags:
-      - Space Weather
-      - Heliophysics
-      - Solar
-      - NASA
-    humanURL: https://ccmc.gsfc.nasa.gov/tools/DONKI/
-    baseURL: https://api.nasa.gov/DONKI
-    properties:
-      - url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
-        type: Documentation
-      - url: openapi/donki-openapi.yml
-        type: OpenAPI
-    description: >-
-      Space Weather Database Of Notifications, Knowledge, Information (DONKI) — a comprehensive on-line tool for space
-      weather forecasters, scientists, and the general public. Exposes coronal mass ejections, geomagnetic storms,
-      interplanetary shocks, solar flares, solar energetic particles, magnetopause crossings, radiation belt
-      enhancements, and high-speed streams.
-  - aid: nasa-gov:earth
-    name: NASA Earth Imagery API
-    tags:
-      - Earth
-      - Imagery
-      - Landsat
-      - Remote Sensing
-      - NASA
-    humanURL: https://api.nasa.gov/
-    baseURL: https://api.nasa.gov/planetary/earth
-    properties:
-      - url: https://api.nasa.gov/
-        type: Documentation
-      - url: openapi/earth-openapi.yml
-        type: OpenAPI
-    description: >-
-      Unlock the significant public investment in earth observation data. Returns Landsat 8 imagery for a given
-      latitude/longitude and date plus assets/metadata. Useful for deforestation monitoring, natural disaster damage
-      assessment, and other Earth surface change detection.
-  - aid: nasa-gov:eonet
-    name: NASA EONET (Earth Observatory Natural Event Tracker)
-    tags:
-      - Earth
-      - Natural Events
-      - Disasters
-      - Earth Observatory
-      - NASA
-    humanURL: https://eonet.gsfc.nasa.gov/docs/v3
-    baseURL: https://eonet.gsfc.nasa.gov/api/v3
-    properties:
-      - url: https://eonet.gsfc.nasa.gov/docs/v3
-        type: Documentation
-      - url: openapi/eonet-openapi.yml
-        type: OpenAPI
-    description: >-
-      Continuously updated, curated source of natural events occurring on Earth — wildfires, severe storms, volcanoes,
-      sea/lake ice, drought, dust/haze, earthquakes, floods, landslides, manmade events, snow, temperature extremes, and
-      water color. Returns events, categories, layers, sources, and magnitudes.
-  - aid: nasa-gov:epic
-    name: NASA EPIC (Earth Polychromatic Imaging Camera)
-    tags:
-      - Earth
-      - Imagery
-      - DSCOVR
-      - NASA
-    humanURL: https://epic.gsfc.nasa.gov/about/api
-    baseURL: https://api.nasa.gov/EPIC
-    properties:
-      - url: https://epic.gsfc.nasa.gov/about/api
-        type: Documentation
-      - url: openapi/epic-openapi.yml
-        type: OpenAPI
-    description: >-
-      The Earth Polychromatic Imaging Camera (EPIC) instrument aboard the DSCOVR satellite provides full-disc imagery of
-      the Earth. Returns natural and enhanced color image metadata with centroid coordinates, spacecraft position, sun
-      position, and lunar position. Both /natural and /enhanced collections supported.
-  - aid: nasa-gov:exoplanet
-    name: NASA Exoplanet Archive API
-    tags:
-      - Exoplanets
-      - Astronomy
-      - Astrophysics
-      - NASA
-    humanURL: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
-    baseURL: https://exoplanetarchive.ipac.caltech.edu/TAP
-    properties:
-      - url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
-        type: Documentation
-      - url: openapi/exoplanet-openapi.yml
-        type: OpenAPI
-    description: >-
-      Programmatic access to NASA's Exoplanet Archive — confirmed planets, planetary candidates, Kepler/K2/TESS objects
-      of interest, microlensing events, and direct imaging detections. Uses the IPAC Table Access Protocol (TAP) with
-      ADQL queries returning CSV, JSON, VOTable, or IPAC ASCII.
-  - aid: nasa-gov:insight
-    name: NASA InSight Mars Weather Service API
-    tags:
-      - Mars
-      - Weather
-      - InSight
-      - Planetary Science
-      - NASA
-    humanURL: https://mars.nasa.gov/insight/weather/
-    baseURL: https://api.nasa.gov/insight_weather
-    properties:
-      - url: https://mars.nasa.gov/insight/weather/
-        type: Documentation
-      - url: openapi/insight-openapi.yml
-        type: OpenAPI
-    description: >-
-      Per-Sol summary data for each of the last seven available Sols (Martian days) of weather at Elysium Planitia,
-      measured by the InSight lander. Reports atmospheric temperature, wind speed and direction, and atmospheric
-      pressure. Note - InSight ended operations in December 2022; data is historical.
-  - aid: nasa-gov:mars-rover-photos
-    name: NASA Mars Rover Photos API
-    tags:
-      - Mars
-      - Rovers
-      - Imagery
-      - Planetary Science
-      - NASA
-    humanURL: https://api.nasa.gov/
-    baseURL: https://api.nasa.gov/mars-photos/api/v1
-    properties:
-      - url: https://api.nasa.gov/
-        type: Documentation
-      - url: https://github.com/chrisccerami/mars-photo-api
-        type: SourceCode
-      - url: openapi/mars-rover-photos-openapi.yml
-        type: OpenAPI
-    description: >-
-      Image data gathered by NASA's Curiosity, Opportunity, Spirit, and Perseverance rovers on Mars. Each photo can be
-      queried by Earth date or Martian sol with optional camera filter (FHAZ, RHAZ, MAST, CHEMCAM, MAHLI, MARDI, NAVCAM,
-      PANCAM, MINITES).
-  - aid: nasa-gov:image-video-library
-    name: NASA Image and Video Library API
-    tags:
-      - Imagery
-      - Video
-      - Media
-      - NASA
-    humanURL: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
-    baseURL: https://images-api.nasa.gov
-    properties:
-      - url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
-        type: Documentation
-      - url: https://github.com/nasa/NASA-Image-and-Video-Library
-        type: SourceCode
-      - url: openapi/image-video-library-openapi.yml
-        type: OpenAPI
-    description: >-
-      API to access the NASA Image and Video Library at images.nasa.gov. Supports searching the Library, retrieving
-      asset manifests, metadata, captions, and resolving rich-text URLs. Endpoints include /search, /asset, /metadata,
-      /captions, and /album.
-  - aid: nasa-gov:techtransfer
-    name: NASA TechTransfer API
-    tags:
-      - Patents
-      - Software
-      - Technology Transfer
-      - Innovation
-      - NASA
-    humanURL: https://api.nasa.gov/
-    baseURL: https://api.nasa.gov/techtransfer
-    properties:
-      - url: https://api.nasa.gov/
-        type: Documentation
-      - url: https://technology.nasa.gov/
-        type: Portal
-      - url: openapi/techtransfer-openapi.yml
-        type: OpenAPI
-    description: >-
-      Structured, searchable developer access to NASA's patents, software, and Spinoff publications. Patents are part of
-      the NASA Technology Transfer Program with the goal of bringing NASA technology down to Earth. Endpoints include
-      /patent, /patent/issued, /software, and /spinoff.
-  - aid: nasa-gov:ssd-cneos
-    name: NASA SSD/CNEOS API
-    tags:
-      - Solar System
-      - Near Earth Objects
-      - Asteroids
-      - NASA
-    humanURL: https://ssd-api.jpl.nasa.gov/
-    baseURL: https://ssd-api.jpl.nasa.gov
-    properties:
-      - url: https://ssd-api.jpl.nasa.gov/
-        type: Documentation
-      - url: openapi/ssd-cneos-openapi.yml
-        type: OpenAPI
-    description: >-
-      Solar System Dynamics and Center for Near-Earth Object Studies APIs at JPL. Includes CAD (close-approach data),
-      SBDB (small body database lookup and query), Sentry (impact risk), Fireball, NHATS, mission design, and scout.
-      Provides authoritative orbital, physical, and risk data for small bodies.
-  - aid: nasa-gov:techport
-    name: NASA TechPort API
-    tags:
-      - Technology
-      - Projects
-      - Research
-      - Innovation
-      - NASA
-    humanURL: https://techport.nasa.gov/api
-    baseURL: https://api.nasa.gov/techport/api
-    properties:
-      - url: https://techport.nasa.gov/api
-        type: Documentation
-      - url: openapi/techport-openapi.yml
-        type: OpenAPI
-    description: >-
-      API to make NASA technology project data available in a machine-readable format. Returns project title,
-      description, benefits, status, dates, organizations, technology areas, and program. Useful for research discovery,
-      technology scouting, and grant analysis.
-  - aid: nasa-gov:tle
-    name: NASA TLE API (Two-Line Element Set)
-    tags:
-      - Satellites
-      - Orbital
-      - TLE
-      - Space Situational Awareness
-      - NASA
-    humanURL: https://tle.ivanstanojevic.me/
-    baseURL: https://tle.ivanstanojevic.me/api
-    properties:
-      - url: https://tle.ivanstanojevic.me/
-        type: Documentation
-      - url: openapi/tle-openapi.yml
-        type: OpenAPI
-    description: >-
-      Two-line element set (TLE) data for earth-orbiting objects at a given point in time. Hosted in partnership outside
-      api.nasa.gov but listed in the NASA Open APIs catalog. Returns satellite name, NORAD ID, line1, line2, and source
-      attribution.
-  - aid: nasa-gov:satellite-situation-center
-    name: NASA Satellite Situation Center API
-    tags:
-      - Satellites
-      - Heliophysics
-      - Spacecraft
-      - NASA
-    humanURL: https://sscweb.gsfc.nasa.gov/WebServices/REST/
-    baseURL: https://sscweb.gsfc.nasa.gov/WS/sscr/2
-    properties:
-      - url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
-        type: Documentation
-      - url: openapi/satellite-situation-center-openapi.yml
-        type: OpenAPI
-    description: >-
-      System to cast geocentric spacecraft location information into a framework of (empirical) geophysical regions and
-      mappings of point locations along the spacecraft trajectory to/from locations of interest (e.g. magnetic
-      conjunctions, IMF mappings).
-  - aid: nasa-gov:genelab
-    name: NASA GeneLab Search API
-    tags:
-      - Bioscience
-      - Genomics
-      - Omics
-      - Space Biology
-      - NASA
-    humanURL: https://genelab.nasa.gov/genelab-help/genelab-api
-    baseURL: https://genelab-data.ndc.nasa.gov/genelab/data
-    properties:
-      - url: https://genelab.nasa.gov/genelab-help/genelab-api
-        type: Documentation
-      - url: openapi/genelab-openapi.yml
-        type: OpenAPI
-    description: >-
-      Programmatic interface for GeneLab's public data repository — space biology omics datasets (genomic,
-      transcriptomic, proteomic, metabolomic, metagenomic) for organisms studied in spaceflight or space-relevant
-      environments. Search by term, type, and organism.
-  - aid: nasa-gov:trek-wmts
-    name: NASA Vesta/Moon/Mars Trek WMTS
-    tags:
-      - Maps
-      - WMTS
-      - Mars
-      - Moon
-      - Vesta
-      - NASA
-    humanURL: https://trek.nasa.gov/
-    baseURL: https://trek.nasa.gov/tiles/Mars/EQ
-    properties:
-      - url: https://trek.nasa.gov/
-        type: Documentation
-      - url: openapi/trek-wmts-openapi.yml
-        type: OpenAPI
-    description: >-
-      A Web Map Tile Service (WMTS) for the Vesta, Moon, and Mars Trek imagery projects. Standardized OGC WMTS tiles
-      consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.
+- aid: nasa-gov:nasa-gov-album-api
+  name: NASA Open APIs Album API
+  description: The Album API from NASA Open APIs — 1 operation(s) for album.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Album
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-album-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-apod-api
+  name: NASA Open APIs APOD API
+  description: The APOD API from NASA Open APIs — 1 operation(s) for apod.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - APOD
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-apod-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-asset-api
+  name: NASA Open APIs Asset API
+  description: The Asset API from NASA Open APIs — 3 operation(s) for asset.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Asset
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-asset-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-asteroids-api
+  name: NASA Open APIs Asteroids API
+  description: The Asteroids API from NASA Open APIs — 3 operation(s) for asteroids.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Asteroids
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-asteroids-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-cad-api
+  name: NASA Open APIs CAD API
+  description: The CAD API from NASA Open APIs — 1 operation(s) for cad.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - CAD
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-cad-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-categories-api
+  name: NASA Open APIs Categories API
+  description: The Categories API from NASA Open APIs — 2 operation(s) for categories.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-categories-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-donki-api
+  name: NASA Open APIs DONKI API
+  description: The DONKI API from NASA Open APIs — 11 operation(s) for donki.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - DONKI
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-donki-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-earth-api
+  name: NASA Open APIs Earth API
+  description: The Earth API from NASA Open APIs — 2 operation(s) for earth.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Earth
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-earth-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-enhanced-api
+  name: NASA Open APIs Enhanced API
+  description: The Enhanced API from NASA Open APIs — 3 operation(s) for enhanced.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Enhanced
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-enhanced-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-events-api
+  name: NASA Open APIs Events API
+  description: The Events API from NASA Open APIs — 1 operation(s) for events.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-events-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-fireball-api
+  name: NASA Open APIs Fireball API
+  description: The Fireball API from NASA Open APIs — 1 operation(s) for fireball.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Fireball
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-fireball-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-layers-api
+  name: NASA Open APIs Layers API
+  description: The Layers API from NASA Open APIs — 1 operation(s) for layers.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Layers
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-layers-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-locations-api
+  name: NASA Open APIs Locations API
+  description: The Locations API from NASA Open APIs — 1 operation(s) for locations.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-locations-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-magnitudes-api
+  name: NASA Open APIs Magnitudes API
+  description: The Magnitudes API from NASA Open APIs — 1 operation(s) for magnitudes.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Magnitudes
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-magnitudes-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-manifests-api
+  name: NASA Open APIs Manifests API
+  description: The Manifests API from NASA Open APIs — 1 operation(s) for manifests.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Manifests
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-manifests-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-natural-api
+  name: NASA Open APIs Natural API
+  description: The Natural API from NASA Open APIs — 4 operation(s) for natural.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Natural
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-natural-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-nhats-api
+  name: NASA Open APIs NHATS API
+  description: The NHATS API from NASA Open APIs — 1 operation(s) for nhats.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - NHATS
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-nhats-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-observatories-api
+  name: NASA Open APIs Observatories API
+  description: The Observatories API from NASA Open APIs — 1 operation(s) for observatories.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Observatories
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-observatories-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-patents-api
+  name: NASA Open APIs Patents API
+  description: The Patents API from NASA Open APIs — 2 operation(s) for patents.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Patents
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-patents-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-photos-api
+  name: NASA Open APIs Photos API
+  description: The Photos API from NASA Open APIs — 2 operation(s) for photos.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Photos
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-photos-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-projects-api
+  name: NASA Open APIs Projects API
+  description: The Projects API from NASA Open APIs — 2 operation(s) for projects.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-projects-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-rovers-api
+  name: NASA Open APIs Rovers API
+  description: The Rovers API from NASA Open APIs — 1 operation(s) for rovers.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Rovers
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-rovers-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-sbdb-api
+  name: NASA Open APIs SBDB API
+  description: The SBDB API from NASA Open APIs — 2 operation(s) for sbdb.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - SBDB
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-sbdb-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-scout-api
+  name: NASA Open APIs Scout API
+  description: The Scout API from NASA Open APIs — 1 operation(s) for scout.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Scout
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-scout-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-search-api
+  name: NASA Open APIs Search API
+  description: The Search API from NASA Open APIs — 1 operation(s) for search.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-search-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-sentry-api
+  name: NASA Open APIs Sentry API
+  description: The Sentry API from NASA Open APIs — 1 operation(s) for sentry.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Sentry
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-sentry-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-software-api
+  name: NASA Open APIs Software API
+  description: The Software API from NASA Open APIs — 1 operation(s) for software.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Software
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-software-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-sources-api
+  name: NASA Open APIs Sources API
+  description: The Sources API from NASA Open APIs — 1 operation(s) for sources.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Sources
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-sources-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-spinoff-api
+  name: NASA Open APIs Spinoff API
+  description: The Spinoff API from NASA Open APIs — 1 operation(s) for spinoff.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Spinoff
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-spinoff-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-stations-api
+  name: NASA Open APIs Stations API
+  description: The Stations API from NASA Open APIs — 1 operation(s) for stations.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Stations
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-stations-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-tap-api
+  name: NASA Open APIs TAP API
+  description: The TAP API from NASA Open APIs — 2 operation(s) for tap.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - TAP
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-tap-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-tle-api
+  name: NASA Open APIs TLE API
+  description: The TLE API from NASA Open APIs — 2 operation(s) for tle.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - TLE
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-tle-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-weather-api
+  name: NASA Open APIs Weather API
+  description: The Weather API from NASA Open APIs — 1 operation(s) for weather.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - Weather
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-weather-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
+- aid: nasa-gov:nasa-gov-wmts-api
+  name: NASA Open APIs WMTS API
+  description: The WMTS API from NASA Open APIs — 1 operation(s) for wmts.
+  humanURL: https://api.nasa.gov/
+  baseURL: https://api.nasa.gov/planetary/apod
+  tags:
+  - WMTS
+  properties:
+  - type: OpenAPI
+    url: openapi/nasa-gov-wmts-api-openapi.yml
+  - type: Documentation
+    url: https://api.nasa.gov/
+  - type: SourceCode
+    url: https://github.com/nasa/apod-api
+  - type: JSONSchema
+    url: json-schema/apod-schema.json
+  - type: SourceCode
+    url: https://github.com/SpaceRocks/NeoWs
+  - type: Documentation
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+  - type: Documentation
+    url: https://eonet.gsfc.nasa.gov/docs/v3
+  - type: Documentation
+    url: https://epic.gsfc.nasa.gov/about/api
+  - type: Documentation
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  - type: Documentation
+    url: https://mars.nasa.gov/insight/weather/
+  - type: SourceCode
+    url: https://github.com/chrisccerami/mars-photo-api
+  - type: Documentation
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+  - type: SourceCode
+    url: https://github.com/nasa/NASA-Image-and-Video-Library
+  - type: Portal
+    url: https://technology.nasa.gov/
+  - type: Documentation
+    url: https://ssd-api.jpl.nasa.gov/
+  - type: Documentation
+    url: https://techport.nasa.gov/api
+  - type: Documentation
+    url: https://tle.ivanstanojevic.me/
+  - type: Documentation
+    url: https://sscweb.gsfc.nasa.gov/WebServices/REST/
+  - type: Documentation
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  - type: Documentation
+    url: https://trek.nasa.gov/
 name: NASA Open APIs
 tags:
   - Government
@@ -343,7 +1647,19 @@ tags:
   - NASA
 kind: contract
 x-type: government
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nasa-gov.png
 access: 3rd-Party
 common:
   - type: AgenticAccess
