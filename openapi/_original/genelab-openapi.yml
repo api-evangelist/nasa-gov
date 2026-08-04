@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: NASA GeneLab Search API
+  description: |
+    Programmatic interface for GeneLab's public data repository - space biology omics datasets (genomic,
+    transcriptomic, proteomic, metabolomic, metagenomic) for organisms studied in spaceflight or
+    space-relevant environments.
+  version: '1.0'
+  contact:
+    name: NASA GeneLab
+    url: https://genelab.nasa.gov/genelab-help/genelab-api
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://genelab-data.ndc.nasa.gov/genelab/data
+paths:
+  /search:
+    get:
+      summary: Search GeneLab Datasets
+      operationId: searchGeneLab
+      tags:
+      - Search
+      parameters:
+      - name: term
+        in: query
+        description: Free text search term.
+        schema:
+          type: string
+      - name: type
+        in: query
+        description: Data type filter (e.g. cgene, expr, comp).
+        schema:
+          type: string
+      - name: from
+        in: query
+        description: Result offset.
+        schema:
+          type: integer
+      - name: size
+        in: query
+        description: Number of results.
+        schema:
+          type: integer
+      - name: ffield
+        in: query
+        description: Filter field.
+        schema:
+          type: string
+      - name: fvalue
+        in: query
+        description: Filter value.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: GeneLab search results.

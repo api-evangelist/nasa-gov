@@ -1,0 +1,126 @@
+openapi: 3.0.3
+info:
+  title: NASA Mars Rover Photos API
+  description: |
+    Image data gathered by NASA's Curiosity, Opportunity, Spirit, and Perseverance rovers on Mars. Each photo
+    can be queried by Earth date or Martian sol with optional camera filter.
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://api.nasa.gov/mars-photos/api/v1
+security:
+- ApiKeyAuth: []
+paths:
+  /rovers:
+    get:
+      summary: List Mars Rovers
+      operationId: listRovers
+      tags:
+      - Rovers
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of rovers and their mission manifests.
+  /rovers/{rover}/photos:
+    get:
+      summary: Get Photos for a Rover
+      operationId: getRoverPhotos
+      tags:
+      - Photos
+      parameters:
+      - name: rover
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - curiosity
+          - opportunity
+          - spirit
+          - perseverance
+      - name: sol
+        in: query
+        description: Martian sol the photos were taken on. One of sol or earth_date is required.
+        schema:
+          type: integer
+          minimum: 0
+      - name: earth_date
+        in: query
+        description: Earth date the photos were taken on (YYYY-MM-DD).
+        schema:
+          type: string
+          format: date
+      - name: camera
+        in: query
+        description: Filter by camera abbreviation.
+        schema:
+          type: string
+          enum:
+          - FHAZ
+          - RHAZ
+          - MAST
+          - CHEMCAM
+          - MAHLI
+          - MARDI
+          - NAVCAM
+          - PANCAM
+          - MINITES
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Photos taken on the requested sol/date.
+  /rovers/{rover}/latest_photos:
+    get:
+      summary: Get Most Recent Photos for a Rover
+      operationId: getRoverLatestPhotos
+      tags:
+      - Photos
+      parameters:
+      - name: rover
+        in: path
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Most recent photos returned by the rover.
+  /manifests/{rover}:
+    get:
+      summary: Get Rover Mission Manifest
+      operationId: getRoverManifest
+      tags:
+      - Manifests
+      parameters:
+      - name: rover
+        in: path
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Mission manifest including landing date, launch date, status, max sol, max date, and per-sol photo counts.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+        default: DEMO_KEY

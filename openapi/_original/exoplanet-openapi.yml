@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: NASA Exoplanet Archive API
+  description: |
+    Programmatic access to NASA's Exoplanet Archive - confirmed planets, planetary candidates, Kepler/K2/TESS
+    objects of interest, microlensing events, and direct imaging detections. Uses the IPAC Table Access
+    Protocol (TAP) with ADQL queries returning CSV, JSON, VOTable, or IPAC ASCII.
+  version: '1.0'
+  contact:
+    name: NASA Exoplanet Archive
+    url: https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://exoplanetarchive.ipac.caltech.edu/TAP
+paths:
+  /sync:
+    get:
+      summary: Synchronous TAP Query
+      operationId: tapSync
+      tags:
+      - TAP
+      parameters:
+      - name: query
+        in: query
+        required: true
+        description: ADQL query string.
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: Response format.
+        schema:
+          type: string
+          enum:
+          - csv
+          - votable
+          - json
+          - tsv
+          - ipac
+      - name: lang
+        in: query
+        schema:
+          type: string
+          default: ADQL
+      responses:
+        '200':
+          description: Tabular query result in the requested format.
+  /async:
+    post:
+      summary: Asynchronous TAP Query
+      operationId: tapAsync
+      tags:
+      - TAP
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                format:
+                  type: string
+                lang:
+                  type: string
+      responses:
+        '303':
+          description: Redirect to job status endpoint.

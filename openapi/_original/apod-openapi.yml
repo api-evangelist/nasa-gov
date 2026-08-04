@@ -1,0 +1,130 @@
+openapi: 3.0.3
+info:
+  title: NASA Astronomy Picture of the Day (APOD) API
+  description: |
+    One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+    random counts, and video thumbnails.
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+    url: https://www.nasa.gov/multimedia/guidelines/index.html
+servers:
+- url: https://api.nasa.gov
+  description: NASA Open API gateway via api.data.gov
+security:
+- ApiKeyAuth: []
+paths:
+  /planetary/apod:
+    get:
+      summary: Get Astronomy Picture of the Day
+      operationId: getApod
+      tags:
+      - APOD
+      parameters:
+      - name: date
+        in: query
+        description: The date of the APOD image to retrieve (YYYY-MM-DD). Defaults to today.
+        schema:
+          type: string
+          format: date
+      - name: start_date
+        in: query
+        description: Start of a date range (YYYY-MM-DD). Cannot be used with date.
+        schema:
+          type: string
+          format: date
+      - name: end_date
+        in: query
+        description: End of a date range (YYYY-MM-DD). Defaults to today.
+        schema:
+          type: string
+          format: date
+      - name: count
+        in: query
+        description: Return count randomly chosen images. Cannot be used with date or date range.
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 100
+      - name: thumbs
+        in: query
+        description: Return the URL of a video thumbnail when the media type is video.
+        schema:
+          type: boolean
+          default: false
+      - name: api_key
+        in: query
+        description: api.nasa.gov key (or DEMO_KEY for evaluation).
+        required: true
+        schema:
+          type: string
+          default: DEMO_KEY
+      responses:
+        '200':
+          description: One APOD entry, an array of entries, or a list of random entries.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                - $ref: '#/components/schemas/ApodEntry'
+                - type: array
+                  items:
+                    $ref: '#/components/schemas/ApodEntry'
+        '400':
+          description: Bad request (invalid date or parameter combination).
+        '403':
+          description: Forbidden (invalid or missing api_key).
+        '429':
+          description: Too many requests (rate limit exceeded).
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+  schemas:
+    ApodEntry:
+      type: object
+      required:
+      - date
+      - explanation
+      - media_type
+      - title
+      - url
+      properties:
+        date:
+          type: string
+          format: date
+          description: Date of the image (YYYY-MM-DD).
+        title:
+          type: string
+          description: Title of the image.
+        explanation:
+          type: string
+          description: Explanation of the image written by APOD editors.
+        url:
+          type: string
+          format: uri
+          description: URL of the APOD image or video.
+        hdurl:
+          type: string
+          format: uri
+          description: URL of the high resolution image (image media type only).
+        media_type:
+          type: string
+          enum:
+          - image
+          - video
+        service_version:
+          type: string
+        copyright:
+          type: string
+          description: Copyright holder when image is not public domain.
+        thumbnail_url:
+          type: string
+          format: uri
+          description: Video thumbnail URL when thumbs=true and media_type=video.

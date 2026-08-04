@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: NASA InSight Mars Weather Service API
+  description: |
+    Per-Sol summary data for each of the last seven available Sols (Martian days) of weather at Elysium Planitia
+    as measured by the InSight lander. Reports temperature, wind, and pressure. NOTE - InSight ended operations
+    in December 2022; data exposed by this endpoint is historical.
+  version: '1.0'
+  contact:
+    name: NASA Open APIs
+    url: https://api.nasa.gov/
+  license:
+    name: US Government Work (Public Domain)
+servers:
+- url: https://api.nasa.gov/insight_weather
+security:
+- ApiKeyAuth: []
+paths:
+  /:
+    get:
+      summary: Get InSight Mars Weather
+      operationId: getInsightWeather
+      tags:
+      - Weather
+      parameters:
+      - name: ver
+        in: query
+        description: API version.
+        schema:
+          type: string
+          default: '1.0'
+      - name: feedtype
+        in: query
+        schema:
+          type: string
+          default: json
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+          default: DEMO_KEY
+      responses:
+        '200':
+          description: Per-Sol weather summary for the most recent seven sols.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
