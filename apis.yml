@@ -1662,6 +1662,13 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nasa-gov.png
 access: 3rd-Party
 common:
+  - type: IssueTracker
+    url: https://github.com/nasa/apod-api/issues
+  - type: Releases
+    url: https://github.com/nasa/apod-api/releases
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/nasa/apod-api/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/nasa-gov-agentic-access.yml
   - type: DomainSecurity
