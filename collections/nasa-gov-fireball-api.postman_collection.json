@@ -1,0 +1,245 @@
+{
+  "item": [
+    {
+      "id": "ce969b3d-4ac1-4903-92e5-051abff408b1",
+      "name": "Fireball",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8c56d8ce-6a9c-4be7-a00c-8e46bd5aed33",
+          "name": "Fireball Atmospheric Impact Events",
+          "request": {
+            "name": "Fireball Atmospheric Impact Events",
+            "description": {},
+            "url": {
+              "path": [
+                "fireball.api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date-min",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date-max",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "energy-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "impact-e-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "vel-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "vel-max",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "alt-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "alt-max",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "req-loc",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "req-alt",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "req-vel",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "req-vel-comp",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "vel-comp",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2596c39-b94e-4d91-8c6e-64f82a65fb4f",
+              "name": "Fireball events table.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fireball.api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date-min",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date-max",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "energy-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "impact-e-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vel-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vel-max",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "alt-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "alt-max",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "req-loc",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "req-alt",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "req-vel",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "req-vel-comp",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "vel-comp",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "77f67c37-25e8-4058-a42e-04e37dedfb7b",
+    "name": "NASA Astronomy Picture of the Day (APOD) Album Fireball API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with\ntitle, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,\nrandom counts, and video thumbnails.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

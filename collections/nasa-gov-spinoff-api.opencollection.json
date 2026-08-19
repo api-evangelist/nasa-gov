@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album Spinoff API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Spinoff",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search NASA Spinoff Publications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/spinoff",
+            "params": [
+              {
+                "name": "Spinoff",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search NASA Spinoff Publications"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

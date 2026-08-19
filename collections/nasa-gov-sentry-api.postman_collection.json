@@ -1,0 +1,173 @@
+{
+  "item": [
+    {
+      "id": "52472492-4eb7-4e8d-ad65-26415340ebc6",
+      "name": "Sentry",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "64f50752-740c-43bf-a6a4-0101a2abb6c9",
+          "name": "Sentry Impact Risk",
+          "request": {
+            "name": "Sentry Impact Risk",
+            "description": {},
+            "url": {
+              "path": [
+                "sentry.api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "spk",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "des",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "h-max",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ps-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ip-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "removed",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "all",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8bb1edcf-0c60-400f-986b-250f94197967",
+              "name": "Sentry impact risk table.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sentry.api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "spk",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "des",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "h-max",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "ps-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "ip-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "removed",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "all",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "59efd20f-ed0a-4aeb-b020-f0e970a26351",
+    "name": "NASA Astronomy Picture of the Day (APOD) Album Sentry API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with\ntitle, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,\nrandom counts, and video thumbnails.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

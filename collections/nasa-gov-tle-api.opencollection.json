@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album TLE API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TLE",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List TLE Records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/tle",
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort-dir",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page-size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List TLE Records"
+        },
+        {
+          "info": {
+            "name": "Get TLE by Satellite ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/tle/:satelliteId",
+            "params": [
+              {
+                "name": "satelliteId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get TLE by Satellite ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

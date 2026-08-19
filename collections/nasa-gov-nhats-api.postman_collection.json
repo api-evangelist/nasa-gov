@@ -1,0 +1,191 @@
+{
+  "item": [
+    {
+      "id": "ce6b86b2-2a48-459b-b38a-180000cf3863",
+      "name": "NHATS",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7a10f893-97b4-4927-ba6b-0410a2664578",
+          "name": "NHATS - Human-Accessible Target Asteroids",
+          "request": {
+            "name": "NHATS - Human-Accessible Target Asteroids",
+            "description": {},
+            "url": {
+              "path": [
+                "nhats.api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "spk",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "des",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dv",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dur",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "stay",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "launch",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "h",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "occ",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "plot",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dacd9b2e-7e59-45e2-be54-8b0adc161dc7",
+              "name": "NHATS summary or single-object detail.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "nhats.api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "spk",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "des",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dv",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "dur",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "stay",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "launch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "h",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "occ",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "plot",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ebddd9a2-3c2f-4852-9772-306fdbcd8792",
+    "name": "NASA Astronomy Picture of the Day (APOD) Album NHATS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with\ntitle, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,\nrandom counts, and video thumbnails.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

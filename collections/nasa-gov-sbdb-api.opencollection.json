@@ -1,0 +1,152 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album SBDB API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SBDB",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Small Body Database Lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/sbdb.api",
+            "params": [
+              {
+                "name": "sstr",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "full-prec",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phys-par",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "discovery",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ca-data",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "virtual-impactor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-orbits",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "r-notes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "r-observer",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Small Body Database Lookup"
+        },
+        {
+          "info": {
+            "name": "Small Body Database Query",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/sbdb_query.api",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-kind",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-group",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-class",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sb-ns",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "full-prec",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Small Body Database Query"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

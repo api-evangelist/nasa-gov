@@ -1,0 +1,154 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album CAD API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CAD",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Close Approach Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/cad.api",
+            "params": [
+              {
+                "name": "date-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dist-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dist-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "v-inf-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "v-inf-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "class",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pha",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nea",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "comet",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nea-comet",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "neo",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "kind",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "body",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "total-only",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "diameter",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fullname",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Close Approach Data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

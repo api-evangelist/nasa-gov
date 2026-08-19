@@ -1,0 +1,351 @@
+{
+  "item": [
+    {
+      "id": "ea836b88-02fa-4826-9f39-8b03ae18db52",
+      "name": "SBDB",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "07eb947c-00b6-4b62-b660-4127e6fe8deb",
+          "name": "Small Body Database Lookup",
+          "request": {
+            "name": "Small Body Database Lookup",
+            "description": {},
+            "url": {
+              "path": [
+                "sbdb.api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sstr",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "spk",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "des",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "full-prec",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phys-par",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "discovery",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ca-data",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "virtual-impactor",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "alt-spk",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "alt-des",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "alt-orbits",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "r-notes",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "r-observer",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6e41b334-bf7c-4eae-859a-a797075e23f9",
+              "name": "Small body record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sbdb.api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sstr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "spk",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "des",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "full-prec",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "phys-par",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "discovery",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "ca-data",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "virtual-impactor",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "alt-spk",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "alt-des",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "alt-orbits",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "r-notes",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "r-observer",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd128ab2-f0a1-4cea-88eb-1816a1c44b73",
+          "name": "Small Body Database Query",
+          "request": {
+            "name": "Small Body Database Query",
+            "description": {},
+            "url": {
+              "path": [
+                "sbdb_query.api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sb-kind",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sb-group",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sb-class",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sb-ns",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "full-prec",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7984fdc2-9d3c-4796-85cd-3817fcf4a457",
+              "name": "Tabular SBDB query response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sbdb_query.api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sb-kind",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sb-group",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sb-class",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sb-ns",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "full-prec",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "67f72655-cc8a-453f-8fe5-fdc3061c042a",
+    "name": "NASA Astronomy Picture of the Day (APOD) Album SBDB API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with\ntitle, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,\nrandom counts, and video thumbnails.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

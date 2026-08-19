@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album Sentry API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sentry",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Sentry Impact Risk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/sentry.api",
+            "params": [
+              {
+                "name": "spk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "des",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "h-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ps-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ip-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "removed",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "all",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Sentry Impact Risk"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

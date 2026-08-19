@@ -1,0 +1,104 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album Scout API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Scout",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Scout - Near-Real-Time NEO Confirmation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/scout.api",
+            "params": [
+              {
+                "name": "tdes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orbits",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "n-orbits",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "eph-start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "eph-stop",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "eph-step",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "obs-code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-diam",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-ra",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-dec",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fov-vmag",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "plot",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "file",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Scout - Near-Real-Time NEO Confirmation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,317 @@
+{
+  "item": [
+    {
+      "id": "be888e73-f7f3-4c3c-b4d4-c361e48989f6",
+      "name": "CAD",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "51ba3280-2ee6-41bf-a5e2-1340c24b0fba",
+          "name": "Close Approach Data",
+          "request": {
+            "name": "Close Approach Data",
+            "description": {},
+            "url": {
+              "path": [
+                "cad.api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date-min",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date-max",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dist-min",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dist-max",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "h-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "h-max",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "v-inf-min",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "v-inf-max",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "class",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pha",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nea",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "comet",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nea-comet",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "neo",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "kind",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "spk",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "des",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "body",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "total-only",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "diameter",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fullname",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96a05498-1bc9-437e-84e5-578fbfd8c62a",
+              "name": "Close approach data table.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cad.api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date-min",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date-max",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dist-min",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dist-max",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "h-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "h-max",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "v-inf-min",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "v-inf-max",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "class",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pha",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "nea",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "comet",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "nea-comet",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "neo",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "kind",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "spk",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "des",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "body",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "total-only",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "diameter",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "fullname",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nasa.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b79301be-4eeb-48c6-aba1-bfb3a2c49d73",
+    "name": "NASA Astronomy Picture of the Day (APOD) Album CAD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with\ntitle, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,\nrandom counts, and video thumbnails.\n\n\nContact Support:\n Name: NASA Open APIs",
+      "type": "text/plain"
+    }
+  }
+}

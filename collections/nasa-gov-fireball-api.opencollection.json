@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NASA Astronomy Picture of the Day (APOD) Album Fireball API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fireball",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fireball Atmospheric Impact Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nasa.gov/fireball.api",
+            "params": [
+              {
+                "name": "date-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "energy-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "impact-e-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vel-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vel-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-min",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "alt-max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-loc",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-alt",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-vel",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req-vel-comp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vel-comp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fireball Atmospheric Impact Events"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
