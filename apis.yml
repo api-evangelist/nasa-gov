@@ -439,6 +439,8 @@ apis:
   humanURL: https://api.nasa.gov/
   baseURL: https://api.nasa.gov/planetary/apod
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -967,6 +969,8 @@ apis:
   humanURL: https://api.nasa.gov/
   baseURL: https://api.nasa.gov/planetary/apod
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -1351,6 +1355,8 @@ apis:
   humanURL: https://api.nasa.gov/
   baseURL: https://api.nasa.gov/planetary/apod
   tags:
+  - Spin-Off
+  tags_raw:
   - Spinoff
   properties:
   - type: OpenAPI
