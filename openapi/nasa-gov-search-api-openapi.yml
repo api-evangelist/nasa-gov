@@ -1,25 +1,13 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NASA Astronomy Picture of the Day (APOD) Album Search API
-  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
-
-    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
-
-    random counts, and video thumbnails.
-
-    '
+  title: Nasa Gov Search API
   version: '1.0'
-  contact:
-    name: NASA Open APIs
-    url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
-    url: https://www.nasa.gov/multimedia/guidelines/index.html
+  description: 'Operations tagged Search across 2 of this provider''s published API definitions: genelab-openapi.yml, image-video-library-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
-- url: https://api.nasa.gov
-  description: NASA Open API gateway via api.data.gov
-security:
-- ApiKeyAuth: []
+- url: https://genelab-data.ndc.nasa.gov/genelab/data
+- url: https://images-api.nasa.gov
 tags:
 - name: Search
 paths:
@@ -63,9 +51,8 @@ paths:
       responses:
         '200':
           description: GeneLab search results.
-components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: query
-      name: api_key
+    servers:
+    - url: https://genelab-data.ndc.nasa.gov/genelab/data
+x-refined-from:
+- genelab-openapi.yml
+- image-video-library-openapi.yml

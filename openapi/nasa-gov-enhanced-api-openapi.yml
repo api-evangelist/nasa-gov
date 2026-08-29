@@ -1,23 +1,21 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NASA Astronomy Picture of the Day (APOD) Album Enhanced API
-  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+  title: NASA EPIC (Earth Polychromatic Imaging Camera) Enhanced API
+  description: 'The DSCOVR EPIC instrument provides full-disc imagery of Earth and captures unique perspectives of certain
 
-    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+    astronomical events such as lunar transits. The API returns natural and enhanced color image metadata with
 
-    random counts, and video thumbnails.
+    centroid coordinates, spacecraft, sun, and lunar positions.
 
     '
   version: '1.0'
   contact:
-    name: NASA Open APIs
-    url: https://api.nasa.gov/
+    name: NASA EPIC
+    url: https://epic.gsfc.nasa.gov/about/api
   license:
     name: US Government Work (Public Domain)
-    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://api.nasa.gov
-  description: NASA Open API gateway via api.data.gov
+- url: https://api.nasa.gov/EPIC
 security:
 - ApiKeyAuth: []
 tags:

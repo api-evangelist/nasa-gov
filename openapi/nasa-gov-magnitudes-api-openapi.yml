@@ -1,25 +1,19 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NASA Astronomy Picture of the Day (APOD) Album Magnitudes API
-  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+  title: NASA EONET (Earth Observatory Natural Event Tracker) Magnitudes API
+  description: 'Curated source of natural events occurring on Earth - wildfires, severe storms, volcanoes, sea/lake ice,
 
-    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
-
-    random counts, and video thumbnails.
+    drought, dust/haze, earthquakes, floods, landslides, manmade, snow, temperature extremes, and water color.
 
     '
-  version: '1.0'
+  version: '3.0'
   contact:
-    name: NASA Open APIs
-    url: https://api.nasa.gov/
+    name: NASA Earth Observatory
+    url: https://eonet.gsfc.nasa.gov/docs/v3
   license:
     name: US Government Work (Public Domain)
-    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://api.nasa.gov
-  description: NASA Open API gateway via api.data.gov
-security:
-- ApiKeyAuth: []
+- url: https://eonet.gsfc.nasa.gov/api/v3
 tags:
 - name: Magnitudes
 paths:
@@ -32,9 +26,3 @@ paths:
       responses:
         '200':
           description: Magnitude IDs and units defined by EONET.
-components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: query
-      name: api_key

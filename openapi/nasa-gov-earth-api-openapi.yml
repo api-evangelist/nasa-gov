@@ -1,11 +1,11 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NASA Astronomy Picture of the Day (APOD) Album Earth API
-  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+  title: NASA Imagery Earth API
+  description: 'Unlock the significant public investment in earth observation data. Returns Landsat 8 imagery for a
 
-    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+    given latitude/longitude/date and asset metadata. Useful for deforestation monitoring, natural
 
-    random counts, and video thumbnails.
+    disaster damage assessment, and other Earth surface change detection.
 
     '
   version: '1.0'
@@ -14,10 +14,8 @@ info:
     url: https://api.nasa.gov/
   license:
     name: US Government Work (Public Domain)
-    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
 - url: https://api.nasa.gov
-  description: NASA Open API gateway via api.data.gov
 security:
 - ApiKeyAuth: []
 tags:

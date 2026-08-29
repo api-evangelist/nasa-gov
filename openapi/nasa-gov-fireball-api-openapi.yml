@@ -1,25 +1,23 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NASA Astronomy Picture of the Day (APOD) Album Fireball API
-  description: 'One of the most popular NASA websites, exposed as a JSON API. Returns the Astronomy Picture of the Day with
+  title: NASA SSD/CNEOS Fireball API
+  description: 'Solar System Dynamics (SSD) and Center for Near-Earth Object Studies (CNEOS) APIs at JPL. Provides
 
-    title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
+    authoritative orbital, physical, and risk data for small bodies including close approach data, small
 
-    random counts, and video thumbnails.
+    body database lookup and query, Sentry impact risk, Fireball atmospheric events, NHATS human-accessible
+
+    targets, mission design, and scout.
 
     '
   version: '1.0'
   contact:
-    name: NASA Open APIs
-    url: https://api.nasa.gov/
+    name: JPL Solar System Dynamics
+    url: https://ssd-api.jpl.nasa.gov/
   license:
     name: US Government Work (Public Domain)
-    url: https://www.nasa.gov/multimedia/guidelines/index.html
 servers:
-- url: https://api.nasa.gov
-  description: NASA Open API gateway via api.data.gov
-security:
-- ApiKeyAuth: []
+- url: https://ssd-api.jpl.nasa.gov
 tags:
 - name: Fireball
 paths:
@@ -93,9 +91,3 @@ paths:
       responses:
         '200':
           description: Fireball events table.
-components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: query
-      name: api_key
