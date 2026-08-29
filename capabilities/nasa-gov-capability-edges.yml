@@ -1,0 +1,26 @@
+slug: nasa-gov
+provider: NASA Open APIs
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Defense & Aerospace
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Patents
+  spec_file: nasa-gov-patents-api-openapi.yml
+  capability_id: BC-840.10
+  capability_id_l1: BC-840
+  capability_name: Patent Portfolio Management
+  confidence: 0.7
+  evidence: GET /patent searchPatents Search NASA Patents ... "Patents are part of the NASA Technology
+    Transfer Program"
+  reason: Operations expose a searchable register of NASA's patent portfolio (all and issued patents)
+    published for technology transfer/licensing, which corresponds to patent portfolio stewardship. Read-only
+    search keeps confidence moderate; IP Licensing (BC-840.40) is a plausible alternative reading.

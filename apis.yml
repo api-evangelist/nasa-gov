@@ -1682,6 +1682,9 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nasa-gov.png
 access: 3rd-Party
 common:
+  - type: CapabilityMap
+    url: capabilities/nasa-gov-capability-edges.yml
+    name: NASA Open APIs Business Capability Map
   - type: IssueTracker
     url: https://github.com/nasa/apod-api/issues
   - type: Releases
