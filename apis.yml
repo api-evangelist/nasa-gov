@@ -1355,7 +1355,7 @@ apis:
   humanURL: https://api.nasa.gov/
   baseURL: https://api.nasa.gov/planetary/apod
   tags:
-  - Spin-Off
+  - Spinoff
   tags_raw:
   - Spinoff
   properties:
