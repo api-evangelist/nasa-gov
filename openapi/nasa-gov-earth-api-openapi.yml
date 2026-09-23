@@ -5,9 +5,7 @@ info:
 
     given latitude/longitude/date and asset metadata. Useful for deforestation monitoring, natural
 
-    disaster damage assessment, and other Earth surface change detection.
-
-    '
+    disaster damage assessment, and other Earth surface change detection.'
   version: '1.0'
   contact:
     name: NASA Open APIs

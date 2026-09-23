@@ -5,9 +5,7 @@ info:
 
     astronomical events such as lunar transits. The API returns natural and enhanced color image metadata with
 
-    centroid coordinates, spacecraft, sun, and lunar positions.
-
-    '
+    centroid coordinates, spacecraft, sun, and lunar positions.'
   version: '1.0'
   contact:
     name: NASA EPIC

@@ -3,9 +3,7 @@ info:
   title: NASA Vesta/Moon/Mars Trek WMTS API
   description: 'A Web Map Tile Service (WMTS) for the Vesta, Moon, and Mars Trek imagery projects. Standardized OGC WMTS
 
-    tiles consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.
-
-    '
+    tiles consumable by Leaflet, OpenLayers, ArcGIS, and QGIS for planetary mapping applications.'
   version: '1.0'
   contact:
     name: NASA Trek

@@ -3,9 +3,7 @@ info:
   title: NASA Mars Rover Photos Manifests API
   description: 'Image data gathered by NASA''s Curiosity, Opportunity, Spirit, and Perseverance rovers on Mars. Each photo
 
-    can be queried by Earth date or Martian sol with optional camera filter.
-
-    '
+    can be queried by Earth date or Martian sol with optional camera filter.'
   version: '1.0'
   contact:
     name: NASA Open APIs

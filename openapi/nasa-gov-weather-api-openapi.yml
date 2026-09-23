@@ -5,9 +5,7 @@ info:
 
     as measured by the InSight lander. Reports temperature, wind, and pressure. NOTE - InSight ended operations
 
-    in December 2022; data exposed by this endpoint is historical.
-
-    '
+    in December 2022; data exposed by this endpoint is historical.'
   version: '1.0'
   contact:
     name: NASA Open APIs

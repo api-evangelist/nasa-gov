@@ -5,9 +5,7 @@ info:
 
     by closest approach date (feed), look up a specific asteroid by NASA JPL small body ID, and browse the
 
-    overall NeoWs dataset.
-
-    '
+    overall NeoWs dataset.'
   version: '1.0'
   contact:
     name: NASA Open APIs

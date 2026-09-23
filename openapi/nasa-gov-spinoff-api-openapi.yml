@@ -3,9 +3,7 @@ info:
   title: NASA TechTransfer Spinoff API
   description: 'Structured, searchable developer access to NASA''s patents, software, and Spinoff publications. Patents are
 
-    part of the NASA Technology Transfer Program with the goal of bringing NASA technology down to Earth.
-
-    '
+    part of the NASA Technology Transfer Program with the goal of bringing NASA technology down to Earth.'
   version: '1.0'
   contact:
     name: NASA Technology Transfer

@@ -1,13 +1,11 @@
 openapi: 3.2.0
 info:
-  title: NASA Satellite Situation Center (SSC) Web Services Stations API
+  title: NASA Satellite Situation Center (SSC) Web Services Stations…
   description: 'System to cast geocentric spacecraft location information into a framework of (empirical) geophysical
 
     regions and mappings of point locations along the spacecraft trajectory to/from locations of interest
 
-    (e.g. magnetic conjunctions, IMF mappings).
-
-    '
+    (e.g. magnetic conjunctions, IMF mappings).'
   version: '2.0'
   contact:
     name: Satellite Situation Center

@@ -5,9 +5,7 @@ info:
 
     objects of interest, microlensing events, and direct imaging detections. Uses the IPAC Table Access
 
-    Protocol (TAP) with ADQL queries returning CSV, JSON, VOTable, or IPAC ASCII.
-
-    '
+    Protocol (TAP) with ADQL queries returning CSV, JSON, VOTable, or IPAC ASCII.'
   version: '1.0'
   contact:
     name: NASA Exoplanet Archive
@@ -17,14 +15,14 @@ info:
 servers:
 - url: https://exoplanetarchive.ipac.caltech.edu/TAP
 tags:
-- name: TAP
+- name: Tap
 paths:
   /sync:
     get:
       summary: Synchronous TAP Query
       operationId: tapSync
       tags:
-      - TAP
+      - Tap
       parameters:
       - name: query
         in: query
@@ -56,7 +54,7 @@ paths:
       summary: Asynchronous TAP Query
       operationId: tapAsync
       tags:
-      - TAP
+      - Tap
       requestBody:
         content:
           application/x-www-form-urlencoded:

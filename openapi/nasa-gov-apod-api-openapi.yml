@@ -5,9 +5,7 @@ info:
 
     title, explanation, image URL, HD URL, optional copyright, and media type. Supports single date, date ranges,
 
-    random counts, and video thumbnails.
-
-    '
+    random counts, and video thumbnails.'
   version: '1.0'
   contact:
     name: NASA Open APIs

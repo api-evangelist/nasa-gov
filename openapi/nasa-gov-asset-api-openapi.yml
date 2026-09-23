@@ -3,9 +3,7 @@ info:
   title: NASA Image and Video Library Asset API
   description: 'API for the NASA Image and Video Library at images.nasa.gov. Supports searching the library, retrieving
 
-    asset manifests, metadata, captions, and resolving rich-text URLs.
-
-    '
+    asset manifests, metadata, captions, and resolving rich-text URLs.'
   version: '1.0'
   contact:
     name: NASA Image and Video Library

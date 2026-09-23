@@ -5,9 +5,7 @@ info:
 
     Open APIs catalog and hosted at tle.ivanstanojevic.me. Returns satellite name, NORAD ID, line1, line2,
 
-    and source attribution.
-
-    '
+    and source attribution.'
   version: '1.0'
   contact:
     url: https://tle.ivanstanojevic.me/

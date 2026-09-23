@@ -1,58 +1,88 @@
 openapi: 3.2.0
 info:
-  title: Nasa Gov Search API
+  title: NASA Image and Video Library Search API
+  description: 'API for the NASA Image and Video Library at images.nasa.gov. Supports searching the library, retrieving
+
+    asset manifests, metadata, captions, and resolving rich-text URLs.'
   version: '1.0'
+  contact:
+    name: NASA Image and Video Library
+    url: https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
   license:
     name: US Government Work (Public Domain)
-  description: 'Operations tagged Search across 2 of this provider''s published API definitions: genelab-openapi.yml, image-video-library-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
-- url: https://genelab-data.ndc.nasa.gov/genelab/data
 - url: https://images-api.nasa.gov
 tags:
 - name: Search
 paths:
   /search:
     get:
-      summary: Search GeneLab Datasets
-      operationId: searchGeneLab
+      summary: Search NASA Image and Video Library
+      operationId: searchLibrary
       tags:
       - Search
       parameters:
-      - name: term
+      - name: q
         in: query
-        description: Free text search term.
+        description: Free text search terms.
         schema:
           type: string
-      - name: type
+      - name: center
         in: query
-        description: Data type filter (e.g. cgene, expr, comp).
         schema:
           type: string
-      - name: from
+      - name: description
         in: query
-        description: Result offset.
+        schema:
+          type: string
+      - name: description_508
+        in: query
+        schema:
+          type: string
+      - name: keywords
+        in: query
+        schema:
+          type: string
+      - name: location
+        in: query
+        schema:
+          type: string
+      - name: media_type
+        in: query
+        schema:
+          type: string
+          enum:
+          - image
+          - video
+          - audio
+      - name: nasa_id
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
         schema:
           type: integer
-      - name: size
+      - name: photographer
         in: query
-        description: Number of results.
-        schema:
-          type: integer
-      - name: ffield
-        in: query
-        description: Filter field.
         schema:
           type: string
-      - name: fvalue
+      - name: secondary_creator
         in: query
-        description: Filter value.
+        schema:
+          type: string
+      - name: title
+        in: query
+        schema:
+          type: string
+      - name: year_start
+        in: query
+        schema:
+          type: string
+      - name: year_end
+        in: query
         schema:
           type: string
       responses:
         '200':
-          description: GeneLab search results.
-    servers:
-    - url: https://genelab-data.ndc.nasa.gov/genelab/data
-x-refined-from:
-- genelab-openapi.yml
-- image-video-library-openapi.yml
+          description: Paged collection of matching media assets.

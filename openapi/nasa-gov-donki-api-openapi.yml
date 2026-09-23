@@ -7,9 +7,7 @@ info:
 
     ejections, geomagnetic storms, interplanetary shocks, solar flares, solar energetic particles,
 
-    magnetopause crossings, radiation belt enhancements, and high-speed streams.
-
-    '
+    magnetopause crossings, radiation belt enhancements, and high-speed streams.'
   version: '1.0'
   contact:
     name: NASA Open APIs
